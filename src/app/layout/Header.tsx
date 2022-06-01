@@ -113,7 +113,7 @@ const Header = ({ darkMode, handleThemeChange }: Props) => {
     setAnchorEl(null);
   };
 
-  const [selectedIndex, setSelectedIndex] = React.useState(1);
+  const [selectedIndex, setSelectedIndex] = React.useState(-1);
 
   const handleListItemClick = (
     event: React.MouseEvent<HTMLDivElement, MouseEvent>,
