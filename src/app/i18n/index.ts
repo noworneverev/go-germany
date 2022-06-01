@@ -23,7 +23,8 @@ i18n
       caches: ['cookie'],
     },
     backend: {
-      loadPath: '/locales/{{lng}}/translation.json',
+      // loadPath: '/locales/{{lng}}/translation.json',
+      loadPath: 'go-germany/locales/{{lng}}/translation.json',
     },
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
