@@ -82,7 +82,7 @@ export default function App() {
       <ToastContainer position="bottom-right" hideProgressBar theme="colored" />
 
       {/* <Router basename={process.env.PUBLIC_URL}> */}
-      <Router>
+      <Router basename="/">
         <CssBaseline />
         <Header darkMode={darkMode} handleThemeChange={handleThemeChange} />
         <Container
