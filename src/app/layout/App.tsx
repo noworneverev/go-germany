@@ -80,7 +80,7 @@ export default function App() {
       <div id="back-to-top-anchor"></div>
       <ToastContainer position="bottom-right" hideProgressBar theme="colored" />
 
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <CssBaseline />
         <Header darkMode={darkMode} handleThemeChange={handleThemeChange} />
         <Container

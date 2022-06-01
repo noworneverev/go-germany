@@ -23,6 +23,7 @@ import {
   Badge,
   Link,
   List,
+  ListItem,
   ListItemButton,
   ListItemText,
   Stack,
@@ -243,16 +244,26 @@ const Header = ({ darkMode, handleThemeChange }: Props) => {
                 {pages.map(({ page, path, isAdmin, index }) => {
                   if (user || !isAdmin) {
                     return (
-                      <ListItemButton
+                      <ListItem
                         key={page}
-                        selected={selectedIndex === index}
-                        onClick={(event) =>
-                          handleListItemClick(event, index, path)
-                        }
+                        component={RouterLink}
+                        to={path}
+                        button
                         sx={{ borderRadius: 2 }}
+                        selected={selectedIndex === index}
+                        onClick={() => setSelectedIndex(index)}
                       >
+                        {/* <ListItemButton
+                          key={page}
+                          selected={selectedIndex === index}
+                          onClick={(event) =>
+                            handleListItemClick(event, index, path)
+                          }
+                          sx={{ borderRadius: 2 }}
+                        > */}
                         <ListItemText primary={page} />
-                      </ListItemButton>
+                        {/* </ListItemButton> */}
+                      </ListItem>
 
                       // <Button
                       //   key={page}
