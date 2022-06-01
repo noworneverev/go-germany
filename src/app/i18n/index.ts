@@ -26,8 +26,8 @@ i18n
       // loadPath: '/locales/{{lng}}/translation.json',
       loadPath:
         process.env.NODE_ENV === 'development'
-          ? 'go-germany/locales/{{lng}}/translation.json'
-          : 'https://noworneverev.github.io/go-germany/locales/{{lng}}/translation.json',
+          ? 'locales/{{lng}}/translation.json'
+          : 'https://noworneverev.github.io/#/go-germany/locales/{{lng}}/translation.json',
     },
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
