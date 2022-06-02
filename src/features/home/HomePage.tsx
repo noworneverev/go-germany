@@ -10,8 +10,8 @@ export default function HomePage() {
   const { t } = useTranslation();
   // const { pathname } = useLocation();
   useEffect(() => {
-    document.title = 'Go Germany';
-  }, []);
+    document.title = `${t('home_header')} | Go Germany`;
+  }, [t]);
 
   return (
     // <Container component={Paper} sx={{ mt: -4 }}>

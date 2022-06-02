@@ -13,6 +13,7 @@ import { useAppDispatch } from '../../app/store/configureStore';
 import { signInUser } from './accountSlice';
 import { FieldValues, useForm } from 'react-hook-form';
 import { LoadingButton } from '@mui/lab';
+import { useEffect } from 'react';
 
 export default function Login() {
   // const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -42,6 +43,10 @@ export default function Login() {
     }
   }
 
+  useEffect(() => {
+    document.title = `${t('login')} | Go Germany`;
+  }, [t]);
+
   return (
     <Container
       component={Paper}
@@ -58,7 +63,7 @@ export default function Login() {
         <LockOutlinedIcon />
       </Avatar>
       <Typography component="h1" variant="h5">
-        Sign in (Admin)
+        {t('sign_in_header')}
       </Typography>
       <Box
         component="form"
@@ -99,7 +104,7 @@ export default function Login() {
           sx={{ mt: 3, mb: 2 }}
           disabled={!isValid}
         >
-          Sign In
+          {t('login')}
         </LoadingButton>
       </Box>
     </Container>

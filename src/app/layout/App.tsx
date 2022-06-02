@@ -129,7 +129,7 @@ export default function App() {
           <Footer />
 
           <ScrollTop>
-            <Fab color="secondary" size="small" aria-label="scroll back to top">
+            <Fab color="inherit" size="small" aria-label="scroll back to top">
               <KeyboardArrowUpIcon />
             </Fab>
           </ScrollTop>

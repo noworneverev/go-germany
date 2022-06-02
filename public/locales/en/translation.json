@@ -57,7 +57,7 @@
   "experience": "Experience",
   "table_view": "Table View",
   "card_view": "Card View",
-  "bookmark_header": "bookmark",
+  "bookmark_header": "Bookmark",
   "application": "Application",
   "columns": "Columns",
   "density": "Density",
@@ -72,8 +72,9 @@
   "feedback": "Feedback",
   "hide_language_article": "Stop fetching languages and articles",
   "performance": "The performance will improve significantly after enabling the option",
-  "hide_application": "Stop fetching applications"
-
+  "hide_application": "Stop fetching applications",
+  "sign_in_header": "Sign in (Admin)",
+  "home_header": "Home"
 
 
 }
