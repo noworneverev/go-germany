@@ -67,14 +67,16 @@
   "show_all": "Zeige alles",
   "admin": "Administrator",
   "login": "Anmeldung",
-  "home_message":"Suchen Sie schnell nach Zielschulen und Erfahrungsartikeln, konzentrieren Sie sich auf Ihre Bewerbung",
+  "home_message":"Suchen Sie schnell nach Zielschulen in Deutschland und verwandten Artikeln, konzentrieren Sie sich auf Ihre Bewerbung",
   "get_started": "Loslegen",
   "feedback": "Rückmeldung",
   "hide_language_article": "Stoppen Sie das Abrufen von Sprachen und Artikeln",
   "performance": "Die Leistung wird sich nach Aktivierung der Option erheblich verbessern",
   "hide_application":"Stoppen Sie das Abrufen von Anwendungen",
   "sign_in_header":"Anmelden (Administrator)",
-  "home_header": "Startseite"
+  "home_header": "Startseite",
+  "home_button_programme": "Programme suchen",
+  "home_button_article": "Artikel suchen"
 
 
 }

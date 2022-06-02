@@ -2,8 +2,8 @@
   "language": "中文（台灣）",
   "darkmode": "開燈",
   "lightmode": "關燈",  
-  "programme_header": "搜尋學程",
-  "article_header": "搜尋心得",
+  "programme_header": "大學學程",
+  "article_header": "心得文章",
   "course_name": "學程名稱",
   "course_type": "課程類型",
   "subject": "學科",
@@ -67,13 +67,15 @@
   "show_all": "全部顯示",
   "admin": "系統管理",
   "login": "登入",
-  "home_message": "快速搜尋目標學校、學程及心得文章，以專注於申請上",
+  "home_message": "快速搜尋德國學校、學程及心得文章，以專注於申請上",
   "get_started": "開始",
   "feedback": "意見回饋",
   "hide_language_article": "不抓取課程語言及文章資訊",
   "performance": "勾選選項後，搜尋速度將顯著提升",
   "hide_application": "不抓取申請學校資訊",
   "sign_in_header": "登入 (管理者)",
-  "home_header": "首頁"
+  "home_header": "首頁",
+  "home_button_programme": "搜尋學程",
+  "home_button_article": "搜尋心得"
 
 }
