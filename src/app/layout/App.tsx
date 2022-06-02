@@ -55,7 +55,7 @@ export default function App() {
   }, [initApp]);
 
   useEffect(() => {
-    ReactGa.initialize('3607064759');
+    ReactGa.initialize('G-DGNDZEQTMM');
 
     ReactGa.pageview(window.location.pathname + window.location.search);
   }, []);
