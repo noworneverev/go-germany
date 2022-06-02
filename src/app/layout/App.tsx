@@ -32,6 +32,7 @@ import PrivateRoute from './PrivateRoute';
 import Feedback from '../../features/feedback/Feedback';
 import ScrollTop from '../components/ScrollTop';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import ReactGa from 'react-ga';
 
 export default function App() {
   const dispatch = useAppDispatch();
@@ -52,6 +53,12 @@ export default function App() {
   useEffect(() => {
     initApp();
   }, [initApp]);
+
+  useEffect(() => {
+    ReactGa.initialize('3607064759');
+
+    ReactGa.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   const [darkMode, setDarkMode] = useState(false);
   const paletteType = darkMode ? 'dark' : 'light';
