@@ -4,6 +4,7 @@ import { useAppDispatch, useAppSelector } from '../../app/store/configureStore';
 import { setCourseParams } from './programmeSlice';
 import SearchIcon from '@mui/icons-material/Search';
 import { useTranslation } from 'react-i18next';
+import ReactGA from 'react-ga4';
 
 export default function CourseSearch() {
   const { courseParams } = useAppSelector((state) => state.programme);
@@ -12,6 +13,10 @@ export default function CourseSearch() {
   const { t } = useTranslation();
   const debouncedSearch = debounce((event: any) => {
     dispatch(setCourseParams({ searchTerm: event.target.value }));
+    ReactGA.event({
+      category: 'search',
+      action: `Search programme: ${event.target.value}`,
+    });
   }, 1000);
 
   return (

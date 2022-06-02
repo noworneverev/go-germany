@@ -12,8 +12,8 @@ const usePageTracking = () => {
       process.env.REACT_APP_MEASUREMENT_ID
     ) {
       ReactGA.initialize(process.env.REACT_APP_MEASUREMENT_ID);
+      setInitialized(true);
     }
-    setInitialized(true);
   }, []);
 
   useEffect(() => {
