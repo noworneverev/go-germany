@@ -32,7 +32,7 @@ import PrivateRoute from './PrivateRoute';
 import Feedback from '../../features/feedback/Feedback';
 import ScrollTop from '../components/ScrollTop';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import ReactGa from 'react-ga';
+import ReactGa from 'react-ga4';
 
 export default function App() {
   const dispatch = useAppDispatch();
