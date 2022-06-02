@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { useAppDispatch, useAppSelector } from '../../app/store/configureStore';
 import { setArticleParams } from './articleSlice';
 import SearchIcon from '@mui/icons-material/Search';
+import ReactGA from 'react-ga4';
 
 export default function ArticleSearch() {
   const { articleParams } = useAppSelector((state) => state.article);
@@ -13,6 +14,15 @@ export default function ArticleSearch() {
   const { t } = useTranslation();
   const debouncedSearch = debounce((event: any) => {
     dispatch(setArticleParams({ searchTerm: event.target.value }));
+    if (
+      !window.location.href.includes('localhost') &&
+      process.env.REACT_APP_MEASUREMENT_ID
+    ) {
+      ReactGA.event({
+        category: 'search',
+        action: `Search article: ${event.target.value}`,
+      });
+    }
   }, 1000);
 
   return (

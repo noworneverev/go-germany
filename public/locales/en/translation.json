@@ -67,14 +67,16 @@
   "show_all": "Show All",
   "admin": "Administrator",
   "login": "Login",
-  "home_message": "Search for target schools and experience articles quickly, focus on your application",
+  "home_message": "Search for target schools in Germany and related articles quickly, focus on your application",
   "get_started": "Get Started",
   "feedback": "Feedback",
   "hide_language_article": "Stop fetching languages and articles",
   "performance": "The performance will improve significantly after enabling the option",
   "hide_application": "Stop fetching applications",
   "sign_in_header": "Sign in (Admin)",
-  "home_header": "Home"
+  "home_header": "Home",
+  "home_button_programme": "Search Programmes",
+  "home_button_article": "Search Articles"
 
 
 }

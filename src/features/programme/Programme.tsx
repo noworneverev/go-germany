@@ -99,9 +99,9 @@ export default function Programme() {
                   <CheckboxButtons
                     items={courseTypes}
                     checked={courseParams.courseTypes}
-                    onChange={(items: string[]) =>
-                      dispatch(setCourseParams({ courseTypes: items }))
-                    }
+                    onChange={(items: string[]) => {
+                      dispatch(setCourseParams({ courseTypes: items }));
+                    }}
                     labels={labels}
                   />
                 }

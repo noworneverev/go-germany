@@ -1,4 +1,11 @@
-import { Button, Container, Grid, Paper, Typography } from '@mui/material';
+import {
+  Button,
+  Container,
+  Grid,
+  Paper,
+  Stack,
+  Typography,
+} from '@mui/material';
 import { useEffect } from 'react';
 // import { ReactComponent as Article } from '../../static/undraw_sharing_articles_re_jnkp.svg';
 import { Link, useLocation } from 'react-router-dom';
@@ -30,23 +37,50 @@ export default function HomePage() {
       justifyContent="center"
     >
       <Container>
-        <Grid container>
+        <Grid container direction="row-reverse">
+          <Grid
+            item
+            xs={12}
+            lg={4}
+            sx={{ mt: 4 }}
+            display="flex"
+            justifyContent="center"
+          >
+            <img src={School} style={{ height: 'auto', maxWidth: '100%' }} />
+          </Grid>
+
           <Grid item lg={8} sx={{ p: 5 }}>
             <Typography variant="h4">{t('home_message')}</Typography>
           </Grid>
-          <Grid item lg={4} sx={{ mt: 4 }}>
-            <img src={School} style={{ height: 'auto', maxWidth: '100%' }} />
-            {/* <img src={Article} style={{ height: 'auto', maxWidth: '100%' }} /> */}
-          </Grid>
-          <Grid item xs={12} sx={{ px: 5 }}>
-            <Button
-              variant="contained"
-              size="large"
-              component={Link}
-              to="/programme"
-            >
-              {t('get_started')}
-            </Button>
+
+          <Grid
+            item
+            xs={12}
+            sx={{ px: 5 }}
+            justifyContent={{ xs: 'center', lg: 'left' }}
+            display="flex"
+          >
+            <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
+              <Button
+                variant="contained"
+                size="large"
+                component={Link}
+                to="/programme"
+                sx={{ textTransform: 'none' }}
+              >
+                {t('home_button_programme')}
+              </Button>
+              <Button
+                variant="contained"
+                size="large"
+                component={Link}
+                to="/article"
+                color="inherit"
+                sx={{ textTransform: 'none' }}
+              >
+                {t('home_button_article')}
+              </Button>
+            </Stack>
           </Grid>
           <Grid item xs={12} sx={{ p: 5 }} />
           <Grid
@@ -55,7 +89,7 @@ export default function HomePage() {
             lg={12}
             justifyContent="center"
             display="flex"
-            // sx={{ mt: 3 }}
+            sx={{ mb: 3 }}
           >
             <img src={School} style={{ height: 'auto', maxWidth: '100%' }} />
           </Grid>

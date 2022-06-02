@@ -36,6 +36,7 @@ import ArticleColumnSwitches from './ArticleColumnSwitches';
 import DensityMenu from '../../app/components/DensityMenu';
 import StyledTableCell from '../../app/components/StyledTableCell';
 import StyledTableRow from '../../app/components/StyledTableRow';
+import ReactGA from 'react-ga4';
 
 interface Props {
   articlesLoaded: boolean;
@@ -448,6 +449,16 @@ export default function ArticleTable({
                         <IconButton
                           onClick={() => {
                             addBookmarkArticleItem(article);
+                            if (
+                              !window.location.href.includes('localhost') &&
+                              process.env.REACT_APP_MEASUREMENT_ID
+                            ) {
+                              ReactGA.event({
+                                category: 'bookmark/article',
+                                action: `Bookmark Article: ${article.id}, ${article.author}, ${article.title}`,
+                              });
+                            }
+
                             const articles = localStorage.getItem('article');
                             if (articles) {
                               dispatch(

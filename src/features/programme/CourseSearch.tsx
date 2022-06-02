@@ -13,10 +13,15 @@ export default function CourseSearch() {
   const { t } = useTranslation();
   const debouncedSearch = debounce((event: any) => {
     dispatch(setCourseParams({ searchTerm: event.target.value }));
-    ReactGA.event({
-      category: 'search',
-      action: `Search programme: ${event.target.value}`,
-    });
+    if (
+      !window.location.href.includes('localhost') &&
+      process.env.REACT_APP_MEASUREMENT_ID
+    ) {
+      ReactGA.event({
+        category: 'search',
+        action: `Search programme: ${event.target.value}`,
+      });
+    }
   }, 1000);
 
   return (

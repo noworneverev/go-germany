@@ -34,6 +34,7 @@ import CourseColumnSwitches from './CourseColumnSwitches';
 import DensityMenu from '../../app/components/DensityMenu';
 import StyledTableCell from '../../app/components/StyledTableCell';
 import StyledTableRow from '../../app/components/StyledTableRow';
+import ReactGA from 'react-ga4';
 
 interface Props {
   coursesLoaded: boolean;
@@ -368,6 +369,16 @@ export default function CourseTable({
                           onClick={() => {
                             // addBookmarkCourseItem(row.id);
                             addBookmarkCourseItem(row);
+                            if (
+                              !window.location.href.includes('localhost') &&
+                              process.env.REACT_APP_MEASUREMENT_ID
+                            ) {
+                              ReactGA.event({
+                                category: 'bookmark/programme',
+                                action: `Bookmark Programme: ${row.id} ${row.name_en}`,
+                              });
+                            }
+
                             const courses = localStorage.getItem('course');
                             if (courses) {
                               dispatch(setBookmarkCourse(JSON.parse(courses)));
