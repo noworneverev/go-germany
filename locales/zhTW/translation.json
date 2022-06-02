@@ -72,6 +72,8 @@
   "feedback": "意見回饋",
   "hide_language_article": "不抓取課程語言及文章資訊",
   "performance": "勾選選項後，搜尋速度將顯著提升",
-  "hide_application": "不抓取申請學校資訊"
+  "hide_application": "不抓取申請學校資訊",
+  "sign_in_header": "登入 (管理者)",
+  "home_header": "首頁"
 
 }
