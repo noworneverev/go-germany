@@ -1,24 +1,18 @@
-import {
-  Box,
-  Button,
-  Container,
-  CssBaseline,
-  Grid,
-  Paper,
-  SvgIcon,
-  Typography,
-} from '@mui/material';
-import React from 'react';
+import { Button, Container, Grid, Paper, Typography } from '@mui/material';
+import { useEffect } from 'react';
 // import { ReactComponent as Article } from '../../static/undraw_sharing_articles_re_jnkp.svg';
-import Article from '../../static/undraw_sharing_articles_re_jnkp.svg';
-import SearchIcon from '@mui/icons-material/Search';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import School from '../../static/undraw_back_to_school_inwc.svg';
-import Cat from '../../static/cat.svg';
 import { useTranslation } from 'react-i18next';
+import ReactGA from 'react-ga4';
 
 export default function HomePage() {
   const { t } = useTranslation();
+  // const { pathname } = useLocation();
+  useEffect(() => {
+    document.title = 'Go Germany';
+  }, []);
+
   return (
     // <Container component={Paper} sx={{ mt: -4 }}>
 

@@ -35,6 +35,7 @@ import {
 } from '../../features/bookmark/bookmarkSlice';
 import ScrollToOpacity from '../components/ScrollToOpacity';
 import AdminMenu from './AdminMenu';
+import usePageTracking from '../hooks/usePageTracking';
 
 interface Props {
   darkMode: boolean;
@@ -45,6 +46,7 @@ interface Props {
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const Header = ({ darkMode, handleThemeChange }: Props) => {
+  usePageTracking();
   let navigate = useNavigate();
   let { pathname } = useLocation();
   const { t } = useTranslation();

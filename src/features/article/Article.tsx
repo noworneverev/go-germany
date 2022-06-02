@@ -9,7 +9,7 @@ import {
   Switch,
   Typography,
 } from '@mui/material';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import AppAccordion from '../../app/components/AppAccordion';
 import AppPagination from '../../app/components/AppPagination';
@@ -23,6 +23,8 @@ import { setCourseParams } from '../programme/programmeSlice';
 import ArticleSearch from './ArticleSearch';
 import { setArticlePageNumber, setArticleParams } from './articleSlice';
 import ArticleTable from './ArticleTable';
+import ReactGA from 'react-ga4';
+import { useLocation } from 'react-router-dom';
 
 const courseTypeOptions = [
   { value: '2', label: 'Master' },
@@ -31,6 +33,7 @@ const courseTypeOptions = [
 
 export default function Article() {
   const { t } = useTranslation();
+  const { pathname } = useLocation();
   const {
     articles,
     articlesLoaded,
@@ -49,6 +52,10 @@ export default function Article() {
   const handleChangeDense = (event: React.ChangeEvent<HTMLInputElement>) => {
     setDense(event.target.checked);
   };
+
+  useEffect(() => {
+    document.title = `${t('article_header')} | Go Germany`;
+  }, [t]);
 
   if (!filtersLoaded) return <LoadingComponent message={t('loading')} />;
 

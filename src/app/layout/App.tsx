@@ -16,6 +16,7 @@ import {
   Routes,
   Route,
   Navigate,
+  useLocation,
 } from 'react-router-dom';
 import Programme from '../../features/programme/Programme';
 import Article from '../../features/article/Article';
@@ -32,7 +33,8 @@ import PrivateRoute from './PrivateRoute';
 import Feedback from '../../features/feedback/Feedback';
 import ScrollTop from '../components/ScrollTop';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import ReactGA from 'react-ga4';
+import usePageTracking from '../hooks/usePageTracking';
+// import ReactGA from 'react-ga4';
 
 export default function App() {
   const dispatch = useAppDispatch();
@@ -54,11 +56,19 @@ export default function App() {
     initApp();
   }, [initApp]);
 
-  useEffect(() => {
-    ReactGA.initialize('G-DGNDZEQTMM');
+  // useEffect(() => {
+  //   console.log(process.env.NODE_ENV);
+  //   console.log(process.env.REACT_APP_MEASUREMENT_ID);
+  //   if (
+  //     process.env.NODE_ENV === 'production' &&
+  //     process.env.REACT_APP_MEASUREMENT_ID
+  //   ) {
 
-    ReactGA.send({ hitType: 'pageview', page: window.location.pathname });
-  }, []);
+  //     ReactGA.initialize(process.env.REACT_APP_MEASUREMENT_ID);
+
+  //     // ReactGA.send({ hitType: 'pageview', page: window.location.pathname });
+  //   }
+  // }, []);
 
   const [darkMode, setDarkMode] = useState(false);
   const paletteType = darkMode ? 'dark' : 'light';

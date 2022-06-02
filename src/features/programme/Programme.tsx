@@ -7,7 +7,7 @@ import {
   Stack,
   Typography,
 } from '@mui/material';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import LoadingComponent from '../../app/layout/LoadingComponent';
 import { useTranslation } from 'react-i18next';
 import { Box } from '@mui/system';
@@ -20,9 +20,12 @@ import CourseSearch from './CourseSearch';
 import CheckboxButtons from '../../app/components/CheckboxButtons';
 import AppAccordion from '../../app/components/AppAccordion';
 import AppSelectCheckboxes from '../../app/components/AppSelectCheckboxes';
+import ReactGA from 'react-ga4';
+import { useLocation } from 'react-router-dom';
 
 export default function Programme() {
   const { t } = useTranslation();
+  // const { pathname } = useLocation();
 
   // const [courses, setCourses] = useState<Course[]>([]);
   // const [pageNumber, setPageNumber] = useState(3);
@@ -45,6 +48,15 @@ export default function Programme() {
   const handleChangeDense = (event: React.ChangeEvent<HTMLInputElement>) => {
     setDense(event.target.checked);
   };
+
+  useEffect(() => {
+    document.title = `${t('programme_header')} | Go Germany`;
+  }, [t]);
+
+  // useEffect(() => {
+  //   if (process.env.NODE_ENV === 'production')
+  //     ReactGA.send({ hitType: 'pageview', page: pathname });
+  // }, []);
 
   // useEffect(() => {
   //   const params = new URLSearchParams();
