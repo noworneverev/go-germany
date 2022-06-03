@@ -4,14 +4,17 @@ import {
   Grid,
   Paper,
   Stack,
+  SvgIcon,
   Typography,
 } from '@mui/material';
 import { useEffect } from 'react';
 // import { ReactComponent as Article } from '../../static/undraw_sharing_articles_re_jnkp.svg';
 import { Link, useLocation } from 'react-router-dom';
 import School from '../../static/undraw_back_to_school_inwc.svg';
+import Dog from '../../static/dog.svg';
 import { useTranslation } from 'react-i18next';
 import ReactGA from 'react-ga4';
+import { ReactComponent as SvgDog } from '../../static/dog.svg';
 
 export default function HomePage() {
   const { t } = useTranslation();
@@ -46,7 +49,15 @@ export default function HomePage() {
             display="flex"
             justifyContent="center"
           >
-            <img src={School} style={{ height: 'auto', maxWidth: '100%' }} />
+            <SvgIcon
+              component={SvgDog}
+              viewBox="0 0 250 150"
+              sx={{ fontSize: 250 }}
+              // inheritViewBox
+              // sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}
+            />
+
+            {/* <img src={Dog} style={{ height: 'auto', maxWidth: '100%' }} /> */}
           </Grid>
 
           <Grid item lg={8} sx={{ p: 5 }}>

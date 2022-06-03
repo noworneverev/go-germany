@@ -27,6 +27,7 @@ import {
   ListItemButton,
   ListItemText,
   Stack,
+  SvgIcon,
 } from '@mui/material';
 import { useEffect } from 'react';
 import {
@@ -36,6 +37,7 @@ import {
 import ScrollToOpacity from '../components/ScrollToOpacity';
 import AdminMenu from './AdminMenu';
 import usePageTracking from '../hooks/usePageTracking';
+import { ReactComponent as Dog } from '../../static/dog.svg';
 
 interface Props {
   darkMode: boolean;
@@ -156,7 +158,12 @@ const Header = ({ darkMode, handleThemeChange }: Props) => {
       >
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <ExploreIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+            <SvgIcon
+              component={Dog}
+              inheritViewBox
+              sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}
+            />
+            {/* <ExploreIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
             <Typography
               variant="h6"
               noWrap
@@ -221,7 +228,12 @@ const Header = ({ darkMode, handleThemeChange }: Props) => {
                 <AdminMenu user={user} />
               </Menu>
             </Box>
-            <ExploreIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+            <SvgIcon
+              component={Dog}
+              inheritViewBox
+              sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }}
+            />
+            {/* <ExploreIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
             <Typography
               variant="h5"
               noWrap
