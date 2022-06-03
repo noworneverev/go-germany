@@ -321,14 +321,18 @@ export default function CourseTable({
                   )}
                   {columnState.university && (
                     <StyledTableCell>
-                      <Link
-                        target="_blank"
-                        href={row.university_link}
-                        underline="hover"
-                        color="inherit"
-                      >
-                        {row.university_name_en}
-                      </Link>
+                      {row.university_link ? (
+                        <Link
+                          target="_blank"
+                          href={row.university_link}
+                          underline="hover"
+                          color="inherit"
+                        >
+                          {row.university_name_en}
+                        </Link>
+                      ) : (
+                        <>{row.university_name_en}</>
+                      )}
                     </StyledTableCell>
                   )}
                   {columnState.tu9 && (

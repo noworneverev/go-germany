@@ -163,14 +163,18 @@ export default function ApplicationTable({ article }: Props) {
                   </StyledTableCell>
                   <StyledTableCell>{course.subject}</StyledTableCell>
                   <StyledTableCell>
-                    <Link
-                      target="_blank"
-                      href={course.university_link}
-                      underline="hover"
-                      color="inherit"
-                    >
-                      {course.university_name_en}
-                    </Link>
+                    {course.university_link ? (
+                      <Link
+                        target="_blank"
+                        href={course.university_link}
+                        underline="hover"
+                        color="inherit"
+                      >
+                        {course.university_name_en}
+                      </Link>
+                    ) : (
+                      <>{course.university_name_en}</>
+                    )}
                   </StyledTableCell>
                   <StyledTableCell>
                     {course.is_tu9 ? <CheckIcon /> : ''}
