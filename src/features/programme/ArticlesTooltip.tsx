@@ -205,5 +205,5 @@ export default function ArticlesTooltip({ articles }: Props) {
     });
   }
 
-  return <>{renderArticles(articles)}</>;
+  return <Stack spacing={0.3}>{renderArticles(articles)}</Stack>;
 }
