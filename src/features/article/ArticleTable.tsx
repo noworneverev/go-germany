@@ -362,7 +362,7 @@ export default function ArticleTable({
                                     size="small"
                                     color="success"
                                     variant="outlined"
-                                    sx={{ ml: 1 }}
+                                    sx={{ ml: 0.5 }}
                                   />
                                 )}
                               </li>
