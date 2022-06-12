@@ -6,7 +6,6 @@ import {
   Grid,
   Paper,
   Stack,
-  Switch,
   Typography,
 } from '@mui/material';
 import React, { useEffect, useState } from 'react';
@@ -19,11 +18,9 @@ import RadioButtonGroup from '../../app/components/RadioButtonGroup';
 import useArticles from '../../app/hooks/useArticles';
 import LoadingComponent from '../../app/layout/LoadingComponent';
 import { useAppDispatch } from '../../app/store/configureStore';
-import { setCourseParams } from '../programme/programmeSlice';
 import ArticleSearch from './ArticleSearch';
 import { setArticlePageNumber, setArticleParams } from './articleSlice';
 import ArticleTable from './ArticleTable';
-import ReactGA from 'react-ga4';
 import { useLocation } from 'react-router-dom';
 
 const courseTypeOptions = [

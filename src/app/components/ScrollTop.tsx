@@ -1,13 +1,6 @@
 import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import CssBaseline from '@mui/material/CssBaseline';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
-import Fab from '@mui/material/Fab';
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import Zoom from '@mui/material/Zoom';
 
 interface Props {
@@ -35,8 +28,6 @@ export default function ScrollTop(props: Props) {
     const anchor = (
       (event.target as HTMLDivElement).ownerDocument || document
     ).querySelector('#back-to-top-anchor');
-
-    console.log(anchor);
 
     if (anchor) {
       anchor.scrollIntoView({

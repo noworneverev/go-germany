@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
 import {
-  Box,
   Container,
   createTheme,
   CssBaseline,
@@ -16,7 +15,6 @@ import {
   Routes,
   Route,
   Navigate,
-  useLocation,
 } from 'react-router-dom';
 import Programme from '../../features/programme/Programme';
 import Article from '../../features/article/Article';
@@ -26,14 +24,13 @@ import BookmarkPage from '../../features/bookmark/BookmarkPage';
 import ArticleDetails from '../../features/article/ArticleDetails';
 import Login from '../../features/account/Login';
 import HomePage from '../../features/home/HomePage';
-import { useAppDispatch, useAppSelector } from '../store/configureStore';
-import { fetchCurrentUser, setUser } from '../../features/account/accountSlice';
+import { useAppDispatch } from '../store/configureStore';
+import { setUser } from '../../features/account/accountSlice';
 import AdminPage from '../../features/admin/AdminPage';
 import PrivateRoute from './PrivateRoute';
 import Feedback from '../../features/feedback/Feedback';
 import ScrollTop from '../components/ScrollTop';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import usePageTracking from '../hooks/usePageTracking';
 // import ReactGA from 'react-ga4';
 
 export default function App() {
@@ -55,20 +52,6 @@ export default function App() {
   useEffect(() => {
     initApp();
   }, [initApp]);
-
-  // useEffect(() => {
-  //   console.log(process.env.NODE_ENV);
-  //   console.log(process.env.REACT_APP_MEASUREMENT_ID);
-  //   if (
-  //     process.env.NODE_ENV === 'production' &&
-  //     process.env.REACT_APP_MEASUREMENT_ID
-  //   ) {
-
-  //     ReactGA.initialize(process.env.REACT_APP_MEASUREMENT_ID);
-
-  //     // ReactGA.send({ hitType: 'pageview', page: window.location.pathname });
-  //   }
-  // }, []);
 
   const [darkMode, setDarkMode] = useState(false);
   const paletteType = darkMode ? 'dark' : 'light';
@@ -138,37 +121,3 @@ export default function App() {
     </ThemeProvider>
   );
 }
-
-// {/* <ThemeProvider theme={theme}>
-//       <ToastContainer position="bottom-right" hideProgressBar theme="colored" />
-//       <Router>
-//         <CssBaseline />
-//         <Header darkMode={darkMode} handleThemeChange={handleThemeChange} />
-//         {/* <Container sx={{ mt: 4 }} maxWidth="xl"> */}
-//         <Container
-//           sx={{
-//             mt: 4,
-//             display: 'flex',
-//             minHeight: '100vh',
-//             flexDirection: 'column',
-//             justifyContent: 'space-between',
-//           }}
-//           maxWidth={false}
-//         >
-//           <Routes>
-//             <Route path="/" element={<HomePage />} />
-//             <Route path="/programme" element={<Programme />} />
-//             <Route path="/programme/:id" element={<CourseDetails />} />
-//             <Route path="/article" element={<Article />} />
-//             <Route path="/article/:id" element={<ArticleDetails />} />
-//             <Route path="/bookmark" element={<BookmarkPage />} />
-//             <Route path="/login" element={<Login />} />
-//             <Route element={<PrivateRoute />}>
-//               <Route path="/admin" element={<AdminPage />} />
-//             </Route>
-//             <Route path="*" element={<Navigate to="/" replace />} />
-//           </Routes>
-//           <Footer />
-//         </Container>
-//       </Router>
-//     </ThemeProvider> */}

@@ -4,15 +4,8 @@ import {
   FormLabel,
   Radio,
   RadioGroup,
-  TextField,
 } from '@mui/material';
-import {
-  FieldValues,
-  useController,
-  UseControllerProps,
-  UseFormRegister,
-} from 'react-hook-form';
-import { useTranslation } from 'react-i18next';
+import { useController, UseControllerProps } from 'react-hook-form';
 
 interface Props extends UseControllerProps {
   label: string;

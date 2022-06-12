@@ -3,7 +3,6 @@ import {
   AccordionSummary,
   Typography,
   AccordionDetails,
-  styled,
 } from '@mui/material';
 import React from 'react';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';

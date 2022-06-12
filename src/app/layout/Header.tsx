@@ -7,10 +7,8 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import ExploreIcon from '@mui/icons-material/Explore';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import { useTranslation } from 'react-i18next';
@@ -24,7 +22,6 @@ import {
   Link,
   List,
   ListItem,
-  ListItemButton,
   ListItemText,
   Stack,
   SvgIcon,

@@ -1,6 +1,6 @@
 import { TextField, InputAdornment } from '@mui/material';
 import { debounce } from 'lodash';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useAppDispatch, useAppSelector } from '../../app/store/configureStore';
 import { setArticleParams } from './articleSlice';

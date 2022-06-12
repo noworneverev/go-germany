@@ -20,8 +20,6 @@ import CourseSearch from './CourseSearch';
 import CheckboxButtons from '../../app/components/CheckboxButtons';
 import AppAccordion from '../../app/components/AppAccordion';
 import AppSelectCheckboxes from '../../app/components/AppSelectCheckboxes';
-import ReactGA from 'react-ga4';
-import { useLocation } from 'react-router-dom';
 
 export default function Programme() {
   const { t } = useTranslation();

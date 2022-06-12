@@ -1,5 +1,5 @@
 import { Container, Paper } from '@mui/material';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import AdminTabs from './AdminTabs';
 
 export default function AdminPage() {

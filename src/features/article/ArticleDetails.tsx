@@ -1,14 +1,12 @@
 import { Box, Container, Grid, IconButton, Tooltip } from '@mui/material';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import LoadingComponent from '../../app/layout/LoadingComponent';
 import { useAppDispatch, useAppSelector } from '../../app/store/configureStore';
 import {
   addBookmarkArticleItem,
-  addBookmarkCourseItem,
   setBookmarkArticle,
-  setBookmarkCourse,
 } from '../bookmark/bookmarkSlice';
 import ApplicationTable from './ApplicationTable';
 import ArticleDetailTable from './ArticleDetailTable';

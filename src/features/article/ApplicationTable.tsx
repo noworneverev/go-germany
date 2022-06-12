@@ -9,9 +9,8 @@ import {
   TableBody,
   Chip,
   Link,
-  Stack,
 } from '@mui/material';
-import React, { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import DensityMenu from '../../app/components/DensityMenu';
 import StyledTableCell from '../../app/components/StyledTableCell';
@@ -20,10 +19,7 @@ import LaunchIcon from '@mui/icons-material/Launch';
 import StyledTableRow from '../../app/components/StyledTableRow';
 import { renderCourseType } from '../programme/CourseTable';
 import CheckIcon from '@mui/icons-material/Check';
-import ArticlesTooltip, {
-  renderResultChip,
-} from '../programme/ArticlesTooltip';
-import LoadingComponent from '../../app/layout/LoadingComponent';
+import { renderResultChip } from '../programme/ArticlesTooltip';
 import { Link as RouterLink } from 'react-router-dom';
 
 interface Props {

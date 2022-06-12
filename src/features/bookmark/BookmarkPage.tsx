@@ -4,8 +4,6 @@ import { useTranslation } from 'react-i18next';
 import { useAppSelector } from '../../app/store/configureStore';
 import ArticleTable from '../article/ArticleTable';
 import CourseTable from '../programme/CourseTable';
-import ReactGA from 'react-ga4';
-import { useLocation } from 'react-router-dom';
 
 export default function BookmarkPage() {
   const { courses, articles } = useAppSelector((state) => state.bookmark);

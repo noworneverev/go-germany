@@ -5,10 +5,8 @@ import {
   Typography,
   styled,
   Link,
-  Grid,
   Tooltip,
 } from '@mui/material';
-import React from 'react';
 
 import { HtmlTooltip } from '../../app/components/HtmlTooltip';
 import { Article } from '../../app/models/article';

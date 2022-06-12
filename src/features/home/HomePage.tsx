@@ -8,7 +8,6 @@ import {
   Typography,
 } from '@mui/material';
 import { useEffect } from 'react';
-// import { ReactComponent as Article } from '../../static/undraw_sharing_articles_re_jnkp.svg';
 import { Link, useLocation } from 'react-router-dom';
 import School from '../../static/undraw_back_to_school_inwc.svg';
 import Dog from '../../static/dog.svg';

@@ -1,12 +1,10 @@
 import {
-  Box,
   Tooltip,
   IconButton,
   Menu,
   MenuItem,
   ListItemIcon,
 } from '@mui/material';
-import { t } from 'i18next';
 import React from 'react';
 import { signOut } from '../../features/account/accountSlice';
 import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';

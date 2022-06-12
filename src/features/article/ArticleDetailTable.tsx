@@ -1,6 +1,5 @@
 import { styled } from '@mui/material/styles';
 import {
-  Grid,
   Link,
   Paper,
   Table,
@@ -11,7 +10,7 @@ import {
   TableRow,
   Typography,
 } from '@mui/material';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Article } from '../../app/models/article';
 import { useTranslation } from 'react-i18next';
 import LaunchIcon from '@mui/icons-material/Launch';

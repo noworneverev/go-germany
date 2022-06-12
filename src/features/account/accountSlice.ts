@@ -2,8 +2,6 @@ import { createAsyncThunk, createSlice, isAnyOf } from '@reduxjs/toolkit';
 import agent from '../../app/api/agent';
 import { User } from '../../app/models/user';
 import { FieldValues } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
 
 interface AccountState {
   user: User | null;

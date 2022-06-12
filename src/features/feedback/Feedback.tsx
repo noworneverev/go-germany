@@ -1,7 +1,5 @@
-import { Box, Grid } from '@mui/material';
-import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import ReactGA from 'react-ga4';
+import { Grid } from '@mui/material';
+import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 export default function Feedback() {

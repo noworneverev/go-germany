@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Course } from '../../app/models/course';
-
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableContainer from '@mui/material/TableContainer';

@@ -1,6 +1,5 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 import { Article } from '../../app/models/article';
-import { Bookmark } from '../../app/models/bookmark';
 import { Course } from '../../app/models/course';
 
 interface BookmarkState {
