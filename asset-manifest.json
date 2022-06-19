@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/go-germany/static/css/main.83216d16.css",
-    "main.js": "/go-germany/static/js/main.a5af69c9.js",
+    "main.js": "/go-germany/static/js/main.acd1d81c.js",
     "static/js/787.c4e7f8f9.chunk.js": "/go-germany/static/js/787.c4e7f8f9.chunk.js",
     "static/media/undraw_back_to_school_inwc.svg": "/go-germany/static/media/undraw_back_to_school_inwc.0a0abe738f3a233182f74a0249d00344.svg",
     "static/media/undraw_city_life_gnpr.svg": "/go-germany/static/media/undraw_city_life_gnpr.dd4e4e9f226dabb019ecc544685ca885.svg",
@@ -11,11 +11,11 @@
     "index.html": "/go-germany/index.html",
     "static/media/getFetch.cjs": "/go-germany/static/media/getFetch.c780682470504fffbd04.cjs",
     "main.83216d16.css.map": "/go-germany/static/css/main.83216d16.css.map",
-    "main.a5af69c9.js.map": "/go-germany/static/js/main.a5af69c9.js.map",
+    "main.acd1d81c.js.map": "/go-germany/static/js/main.acd1d81c.js.map",
     "787.c4e7f8f9.chunk.js.map": "/go-germany/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.83216d16.css",
-    "static/js/main.a5af69c9.js"
+    "static/js/main.acd1d81c.js"
   ]
 }
