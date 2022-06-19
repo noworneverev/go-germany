@@ -1,4 +1,4 @@
-import { TextField, InputAdornment } from '@mui/material';
+import { TextField, InputAdornment, Tooltip } from '@mui/material';
 import { debounce } from 'lodash';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -26,22 +26,24 @@ export default function ArticleSearch() {
   }, 1000);
 
   return (
-    <TextField
-      label={t('search_programmes')}
-      variant="outlined"
-      fullWidth
-      value={searchTerm || ''}
-      onChange={(event: any) => {
-        setSearchTerm(event.target.value);
-        debouncedSearch(event);
-      }}
-      InputProps={{
-        endAdornment: (
-          <InputAdornment position="start">
-            <SearchIcon />
-          </InputAdornment>
-        ),
-      }}
-    />
+    <Tooltip title={t('search_article_helpertext')} arrow placement="right">
+      <TextField
+        label={t('search_programmes')}
+        variant="outlined"
+        fullWidth
+        value={searchTerm || ''}
+        onChange={(event: any) => {
+          setSearchTerm(event.target.value);
+          debouncedSearch(event);
+        }}
+        InputProps={{
+          endAdornment: (
+            <InputAdornment position="start">
+              <SearchIcon />
+            </InputAdornment>
+          ),
+        }}
+      />
+    </Tooltip>
   );
 }

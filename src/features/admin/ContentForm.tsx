@@ -29,7 +29,7 @@ export default function ContentForm() {
   return (
     <Box sx={{ p: 2 }}>
       <Typography variant="h4" gutterBottom sx={{ mb: 4 }}>
-        Add University
+        Add Content
       </Typography>
       <form onSubmit={handleSubmit(handleSubmitData)}>
         <Grid container spacing={3}>
@@ -135,6 +135,14 @@ export default function ContentForm() {
               control={control}
               name="courseType"
               label="Course Type"
+            />
+          </Grid>
+          <Grid item xs={12} sm={12}>
+            <AppTextInput
+              control={control}
+              name="content"
+              label="Content"
+              multiline={true}
             />
           </Grid>
         </Grid>

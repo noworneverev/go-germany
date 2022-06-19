@@ -1,4 +1,10 @@
-import { debounce, IconButton, InputAdornment, TextField } from '@mui/material';
+import {
+  debounce,
+  IconButton,
+  InputAdornment,
+  TextField,
+  Tooltip,
+} from '@mui/material';
 import React, { useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../../app/store/configureStore';
 import { setCourseParams } from './programmeSlice';
@@ -25,22 +31,24 @@ export default function CourseSearch() {
   }, 1000);
 
   return (
-    <TextField
-      label={t('search_programmes')}
-      variant="outlined"
-      fullWidth
-      value={searchTerm || ''}
-      onChange={(event: any) => {
-        setSearchTerm(event.target.value);
-        debouncedSearch(event);
-      }}
-      InputProps={{
-        endAdornment: (
-          <InputAdornment position="start">
-            <SearchIcon />
-          </InputAdornment>
-        ),
-      }}
-    />
+    <Tooltip title={t('search_course_helpertext')} arrow placement="right">
+      <TextField
+        label={t('search_programmes')}
+        variant="outlined"
+        fullWidth
+        value={searchTerm || ''}
+        onChange={(event: any) => {
+          setSearchTerm(event.target.value);
+          debouncedSearch(event);
+        }}
+        InputProps={{
+          endAdornment: (
+            <InputAdornment position="start">
+              <SearchIcon />
+            </InputAdornment>
+          ),
+        }}
+      />
+    </Tooltip>
   );
 }

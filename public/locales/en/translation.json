@@ -76,7 +76,8 @@
   "sign_in_header": "Sign in (Admin)",
   "home_header": "Home",
   "home_button_programme": "Search Programmes",
-  "home_button_article": "Search Articles"
-
+  "home_button_article": "Search Articles",
+  "search_course_helpertext": "Search by course's name, course's subject, university's English name or university's Chinese name",
+  "search_article_helpertext": "Search by author, title, source, bachelor's (master's) university, bachelor's (master's) department, or the content of the article.(Full-text search supported)"
 
 }
