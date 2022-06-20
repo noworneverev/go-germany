@@ -3,6 +3,7 @@ import {
   Container,
   createTheme,
   CssBaseline,
+  darkScrollbar,
   Fab,
   ThemeProvider,
 } from '@mui/material';
@@ -62,6 +63,13 @@ export default function App() {
       background: {
         // default: paletteType === 'light' ? '#FFFFFF' : '#1B1B1D',
         default: paletteType === 'light' ? '#eaeaea' : '#121212',
+      },
+    },
+    components: {
+      MuiCssBaseline: {
+        styleOverrides: {
+          body: paletteType === 'dark' ? darkScrollbar() : null,
+        },
       },
     },
   });
