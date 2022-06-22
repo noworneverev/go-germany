@@ -7,6 +7,8 @@ import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { Link as RouterLink } from 'react-router-dom';
 import Divider from '@mui/material/Divider';
+import BadgeIcon from '@mui/icons-material/Badge';
+import EngineeringIcon from '@mui/icons-material/Engineering';
 
 // import Heart from '../../static/heart.svg';
 
@@ -50,6 +52,17 @@ export default function Footer() {
     >
       <Grid item>
         <Box>
+          <Link
+            target="_blank"
+            href={'https://noworneverev.github.io'}
+            underline="none"
+            color="inherit"
+          >
+            <IconButton color="inherit">
+              <BadgeIcon />
+            </IconButton>
+          </Link>
+
           <Link
             target="_blank"
             href={'https://github.com/noworneverev'}
