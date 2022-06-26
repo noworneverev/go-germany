@@ -29,7 +29,15 @@ function Copyright() {
         }
       </Typography>
       <Typography variant="body2" color="text.secondary">
-        {'Made with ❤️ by Yan-Ying Liao'}
+        {'Made with ❤️ by '}
+        <Link
+          target="_blank"
+          href={'https://noworneverev.github.io'}
+          underline="hover"
+          color="inherit"
+        >
+          Yan-Ying Liao
+        </Link>
       </Typography>
     </Stack>
   );
