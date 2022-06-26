@@ -94,9 +94,16 @@ The whole project consists of three repositories, [go-germany](https://github.co
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+- Search Programmes
+  - Search by course's name, course's subject, university's English name or university's Chinese name
+- Search Articles
+  - Search by author, title, source, bachelor's (master's) university, bachelor's (master's) department, or the content of the article.
+  - **Full-text search supported**
+- Bookmark
+  - Add your favorite programmes or articles to bookmark! You can later browse all of them at one go.
+- Admin
+  - For administrators only
+  - Add new courses and articles after logging in
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
