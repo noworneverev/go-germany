@@ -85,7 +85,7 @@ export default function HomePage() {
                 size="large"
                 component={Link}
                 to="/article"
-                color="inherit"
+                color="success"
                 sx={{ textTransform: 'none' }}
               >
                 {t('home_button_article')}

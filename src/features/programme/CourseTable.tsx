@@ -35,6 +35,7 @@ import DensityMenu from '../../app/components/DensityMenu';
 import StyledTableCell from '../../app/components/StyledTableCell';
 import StyledTableRow from '../../app/components/StyledTableRow';
 import ReactGA from 'react-ga4';
+import StyledLink from '../../app/components/StyledLink';
 
 interface Props {
   coursesLoaded: boolean;
@@ -157,11 +158,11 @@ export default function CourseTable({
               {columnState.programme && (
                 <StyledTableCell>
                   <Box
-                    sx={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      flexWrap: 'wrap',
-                    }}
+                  // sx={{
+                  //   display: 'flex',
+                  //   alignItems: 'center',
+                  //   flexWrap: 'wrap',
+                  // }}
                   >
                     {t('course_name')}
                     <LaunchIcon fontSize="small" sx={{ ml: 1 }} />
@@ -180,11 +181,11 @@ export default function CourseTable({
               {columnState.university && (
                 <StyledTableCell>
                   <Box
-                    sx={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      flexWrap: 'wrap',
-                    }}
+                  // sx={{
+                  //   display: 'flex',
+                  //   alignItems: 'center',
+                  //   flexWrap: 'wrap',
+                  // }}
                   >
                     {t('university_name')}
                     <LaunchIcon fontSize="small" sx={{ ml: 1 }} />
@@ -196,11 +197,11 @@ export default function CourseTable({
               {columnState.article && (
                 <StyledTableCell>
                   <Box
-                    sx={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      flexWrap: 'wrap',
-                    }}
+                  // sx={{
+                  //   display: 'flex',
+                  //   alignItems: 'center',
+                  //   flexWrap: 'wrap',
+                  // }}
                   >
                     {t('article')}
                     <LaunchIcon fontSize="small" sx={{ ml: 1 }} />
@@ -282,14 +283,18 @@ export default function CourseTable({
                   {columnState.programme && (
                     <StyledTableCell component="th" scope="row">
                       {row.is_from_daad ? (
-                        <Link
-                          target="_blank"
+                        // <Link
+                        //   target="_blank"
+                        //   href={'https://www2.daad.de' + row.daadlink}
+                        //   underline="hover"
+                        //   color="inherit"
+                        // >
+                        //   {row.name_en}
+                        // </Link>
+                        <StyledLink
                           href={'https://www2.daad.de' + row.daadlink}
-                          underline="hover"
-                          color="inherit"
-                        >
-                          {row.name_en}
-                        </Link>
+                          text={row.name_en}
+                        />
                       ) : (
                         <>
                           {row.name_en}
@@ -322,14 +327,10 @@ export default function CourseTable({
                   {columnState.university && (
                     <StyledTableCell>
                       {row.university_link ? (
-                        <Link
-                          target="_blank"
+                        <StyledLink
                           href={row.university_link}
-                          underline="hover"
-                          color="inherit"
-                        >
-                          {row.university_name_en}
-                        </Link>
+                          text={row.university_name_en}
+                        />
                       ) : (
                         <>{row.university_name_en}</>
                       )}

@@ -20,6 +20,7 @@ import StyledTableCell from '../../app/components/StyledTableCell';
 import StyledTableRow from '../../app/components/StyledTableRow';
 import DensityMenu from '../../app/components/DensityMenu';
 import { renderDate } from '../../app/utils/utils';
+import StyledLink from '../../app/components/StyledLink';
 
 interface Props {
   course: Course;
@@ -82,11 +83,11 @@ export default function ExperienceTable({ course }: Props) {
               <StyledTableCell>{t('author')}</StyledTableCell>
               <StyledTableCell>
                 <Box
-                  sx={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    flexWrap: 'wrap',
-                  }}
+                // sx={{
+                //   display: 'flex',
+                //   alignItems: 'center',
+                //   flexWrap: 'wrap',
+                // }}
                 >
                   {t('title')}
                   <LaunchIcon fontSize="small" sx={{ ml: 1 }} />
@@ -139,14 +140,7 @@ export default function ExperienceTable({ course }: Props) {
                     {row.author}
                   </StyledTableCell>
                   <StyledTableCell>
-                    <Link
-                      target="_blank"
-                      href={row.link}
-                      underline="hover"
-                      color="inherit"
-                    >
-                      {row.title}
-                    </Link>
+                    <StyledLink href={row.link} text={row.title} />
                   </StyledTableCell>
                   <StyledTableCell>
                     <Stack spacing={0.5}>

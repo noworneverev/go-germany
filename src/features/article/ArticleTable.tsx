@@ -37,6 +37,7 @@ import DensityMenu from '../../app/components/DensityMenu';
 import StyledTableCell from '../../app/components/StyledTableCell';
 import StyledTableRow from '../../app/components/StyledTableRow';
 import ReactGA from 'react-ga4';
+import StyledLink from '../../app/components/StyledLink';
 
 interface Props {
   articlesLoaded: boolean;
@@ -139,11 +140,11 @@ export default function ArticleTable({
               {columnState.title && (
                 <StyledTableCell>
                   <Box
-                    sx={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      flexWrap: 'wrap',
-                    }}
+                  // sx={{
+                  //   display: 'flex',
+                  //   alignItems: 'center',
+                  //   flexWrap: 'wrap',
+                  // }}
                   >
                     {t('title')}
                     <LaunchIcon fontSize="small" sx={{ ml: 1 }} />
@@ -329,14 +330,15 @@ export default function ArticleTable({
                         {renderDate(article.published_at)}
                       </Typography>
 
-                      <Link
+                      {/* <Link
                         target="_blank"
                         href={article.link}
                         underline="hover"
                         color="inherit"
                       >
                         {article.title}
-                      </Link>
+                      </Link> */}
+                      <StyledLink href={article.link} text={article.title} />
                     </StyledTableCell>
                   )}
                   {columnState.application && (

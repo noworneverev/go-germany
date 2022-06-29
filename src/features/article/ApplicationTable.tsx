@@ -21,6 +21,7 @@ import { renderCourseType } from '../programme/CourseTable';
 import CheckIcon from '@mui/icons-material/Check';
 import { renderResultChip } from '../programme/ArticlesTooltip';
 import { Link as RouterLink } from 'react-router-dom';
+import StyledLink from '../../app/components/StyledLink';
 
 interface Props {
   article: Article;
@@ -46,29 +47,18 @@ export default function ApplicationTable({ article }: Props) {
         <Table sx={{ minWidth: 700 }} size={dense ? 'small' : 'medium'}>
           <TableHead>
             <TableRow>
-              <StyledTableCell>
-                <Box
-                  sx={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    flexWrap: 'wrap',
-                  }}
-                >
-                  {t('course_name')}
-                  <LaunchIcon fontSize="small" sx={{ ml: 1 }} />
-                </Box>
-              </StyledTableCell>
+              <StyledTableCell>{t('course_name')}</StyledTableCell>
               {/* <StyledTableCell>{t('course_language')}</StyledTableCell> */}
               <StyledTableCell>{t('result')}</StyledTableCell>
               <StyledTableCell>{t('course_type')}</StyledTableCell>
               <StyledTableCell>{t('subject')}</StyledTableCell>
               <StyledTableCell>
                 <Box
-                  sx={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    flexWrap: 'wrap',
-                  }}
+                // sx={{
+                //   display: 'flex',
+                //   alignItems: 'center',
+                //   flexWrap: 'wrap',
+                // }}
                 >
                   {t('university_name')}
                   <LaunchIcon fontSize="small" sx={{ ml: 1 }} />
@@ -160,14 +150,10 @@ export default function ApplicationTable({ article }: Props) {
                   <StyledTableCell>{course.subject}</StyledTableCell>
                   <StyledTableCell>
                     {course.university_link ? (
-                      <Link
-                        target="_blank"
+                      <StyledLink
                         href={course.university_link}
-                        underline="hover"
-                        color="inherit"
-                      >
-                        {course.university_name_en}
-                      </Link>
+                        text={course.university_name_en}
+                      />
                     ) : (
                       <>{course.university_name_en}</>
                     )}
