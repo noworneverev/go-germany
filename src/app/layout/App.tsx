@@ -120,7 +120,22 @@ export default function App() {
           <Footer />
 
           <ScrollTop>
-            <Fab color="default" size="small" aria-label="scroll back to top">
+            <Fab
+              size="small"
+              aria-label="scroll back to top"
+              sx={{
+                backgroundColor:
+                  theme.palette.mode === 'dark' ? '#444950' : '#ebedf0',
+                color:
+                  theme.palette.mode === 'dark'
+                    ? theme.palette.grey[500]
+                    : theme.palette.grey[700],
+                '&.MuiFab-root:hover': {
+                  bgcolor:
+                    theme.palette.mode === 'dark' ? '#606770' : '#dadde1',
+                },
+              }}
+            >
               <KeyboardArrowUpIcon />
             </Fab>
           </ScrollTop>
