@@ -11,19 +11,12 @@ import {
 import { HtmlTooltip } from '../../app/components/HtmlTooltip';
 import { Article } from '../../app/models/article';
 import LibraryAddCheckIcon from '@mui/icons-material/LibraryAddCheck';
-import StyledLink from '../../app/components/StyledLink';
 
 interface Props {
   articles: Article[];
 }
 
 const StyledChip = styled(Chip)(({ theme }) => ({
-  '&.MuiChip-outlined': {
-    borderColor: theme.palette.action.disabled,
-  },
-}));
-
-const StyledPttChip = styled(Chip)(({ theme }) => ({
   '&.MuiChip-outlined': {
     borderColor: theme.palette.action.disabled,
   },
@@ -163,22 +156,31 @@ export default function ArticlesTooltip({ articles }: Props) {
                 </>
               )}
               {renderResultChip(article.result)}
+              {article.is_decision && (
+                <>
+                  <StyledChip
+                    label="Decision"
+                    size="small"
+                    variant="outlined"
+                    color="success"
+                  />
+                </>
+              )}
             </Stack>
           </Box>
         }
       >
         <div>
           {source && renderSourceChip(source)}
-          {/* <Link
+          <Link
             target="_blank"
             href={article.link}
             underline="hover"
             color="inherit"
           >
-            
             {article.title}
-          </Link> */}
-          <StyledLink href={article.link} text={article.title} />
+          </Link>
+          {/* <StyledLink href={article.link} text={article.title} /> */}
         </div>
       </HtmlTooltip>
     );
