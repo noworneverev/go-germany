@@ -78,7 +78,9 @@
   "home_button_programme": "Programme suchen",
   "home_button_article": "Artikel suchen",
   "search_course_helpertext": "Suchen Sie nach dem Namen des Kurses, dem Fach des Kurses, dem englischen Namen der Universität oder dem chinesischen Namen der Universität",
-  "search_article_helpertext": "Suche nach Autor, Titel, Quelle, Bachelor- (Master-) Hochschule, Bachelor- (Master-) Fachbereich oder dem Inhalt des Artikels. (Volltextsuche unterstützt)"
+  "search_article_helpertext": "Suche nach Autor, Titel, Quelle, Bachelor- (Master-) Hochschule, Bachelor- (Master-) Fachbereich oder dem Inhalt des Artikels. (Volltextsuche unterstützt)",
+  "expand": "Erweitern",
+  "collapse": "Zusammenbruch"
 
 
 }

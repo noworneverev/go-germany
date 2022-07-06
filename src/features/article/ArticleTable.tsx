@@ -31,19 +31,22 @@ import {
   setBookmarkArticle,
 } from '../bookmark/bookmarkSlice';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 import ArticleColumnSwitches from './ArticleColumnSwitches';
 import DensityMenu from '../../app/components/DensityMenu';
 import StyledTableCell from '../../app/components/StyledTableCell';
 import StyledTableRow from '../../app/components/StyledTableRow';
 import ReactGA from 'react-ga4';
 import StyledLink from '../../app/components/StyledLink';
+import AppExpandButton from '../../app/components/AppExpandButton';
 
 interface Props {
   articlesLoaded: boolean;
   articles: Article[];
   metaData: MetaData | null;
   isInBookmark?: boolean;
+  expanded?: boolean;
+  setExpanded?: Dispatch<SetStateAction<boolean>>;
 }
 
 export default function ArticleTable({
@@ -51,6 +54,8 @@ export default function ArticleTable({
   articlesLoaded,
   metaData,
   isInBookmark,
+  expanded,
+  setExpanded,
 }: Props) {
   const { t } = useTranslation();
   const [dense, setDense] = useState(false);
@@ -117,6 +122,9 @@ export default function ArticleTable({
   return (
     <>
       <Stack direction="row" spacing={0.3}>
+        {setExpanded && expanded !== undefined && (
+          <AppExpandButton expanded={expanded} setExpanded={setExpanded} />
+        )}
         <ArticleColumnSwitches
           columnState={columnState}
           handleChange={handleChange}

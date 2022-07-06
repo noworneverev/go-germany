@@ -7,7 +7,6 @@ import {
   TableBody,
   Chip,
   IconButton,
-  Link,
   Skeleton,
   Tooltip,
   Box,
@@ -29,13 +28,14 @@ import {
 } from '../bookmark/bookmarkSlice';
 import DeleteIcon from '@mui/icons-material/Delete';
 import BookmarkAddIcon from '@mui/icons-material/BookmarkAdd';
-import { useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 import CourseColumnSwitches from './CourseColumnSwitches';
 import DensityMenu from '../../app/components/DensityMenu';
 import StyledTableCell from '../../app/components/StyledTableCell';
 import StyledTableRow from '../../app/components/StyledTableRow';
 import ReactGA from 'react-ga4';
 import StyledLink from '../../app/components/StyledLink';
+import AppExpandButton from '../../app/components/AppExpandButton';
 
 interface Props {
   coursesLoaded: boolean;
@@ -43,6 +43,8 @@ interface Props {
   // dense: boolean;
   metaData: MetaData | null;
   isInBookmark?: boolean;
+  expanded?: boolean;
+  setExpanded?: Dispatch<SetStateAction<boolean>>;
 }
 
 export const renderCourseType = (type: string) => {
@@ -76,6 +78,8 @@ export default function CourseTable({
   coursesLoaded,
   metaData,
   isInBookmark,
+  expanded,
+  setExpanded,
 }: Props) {
   const { t } = useTranslation();
   const [dense, setDense] = useState(false);
@@ -139,6 +143,10 @@ export default function CourseTable({
   return (
     <>
       <Stack direction="row" spacing={0.3}>
+        {setExpanded && expanded !== undefined && (
+          <AppExpandButton expanded={expanded} setExpanded={setExpanded} />
+        )}
+
         <CourseColumnSwitches
           columnState={columnState}
           handleChange={handleChange}

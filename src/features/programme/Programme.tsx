@@ -1,25 +1,15 @@
 import Paper from '@mui/material/Paper';
-import {
-  Checkbox,
-  FormControlLabel,
-  FormGroup,
-  Grid,
-  Stack,
-  Typography,
-} from '@mui/material';
+import { Grid } from '@mui/material';
 import { useEffect, useState } from 'react';
 import LoadingComponent from '../../app/layout/LoadingComponent';
 import { useTranslation } from 'react-i18next';
 import { Box } from '@mui/system';
 import useCourses from '../../app/hooks/useCourses';
 import AppPagination from '../../app/components/AppPagination';
-import { setCourseParams, setPageNumber } from './programmeSlice';
+import { setPageNumber } from './programmeSlice';
 import { useAppDispatch } from '../../app/store/configureStore';
 import CourseTable from './CourseTable';
-import CourseSearch from './CourseSearch';
-import CheckboxButtons from '../../app/components/CheckboxButtons';
-import AppAccordion from '../../app/components/AppAccordion';
-import AppSelectCheckboxes from '../../app/components/AppSelectCheckboxes';
+import CourseFilters from './CourseFilters';
 
 export default function Programme() {
   const { t } = useTranslation();
@@ -29,22 +19,12 @@ export default function Programme() {
   // const [pageNumber, setPageNumber] = useState(3);
   // const [pageSize, setPageSize] = useState(100);
 
-  const {
-    courses,
-    coursesLoaded,
-    metaData,
-    filtersLoaded,
-    courseParams,
-    courseTypes,
-    institutions,
-    subjects,
-    languages,
-  } = useCourses();
+  const { courses, coursesLoaded, metaData, filtersLoaded } = useCourses();
   const dispatch = useAppDispatch();
 
-  const [dense, setDense] = useState(false);
-  const handleChangeDense = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setDense(event.target.checked);
+  const [expanded, setExpanded] = useState(true);
+  const handleChangeExpanded = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setExpanded(event.target.checked);
   };
 
   useEffect(() => {
@@ -71,173 +51,25 @@ export default function Programme() {
 
   // if (!coursesLoaded) return <LoadingComponent message={t('loading')} />;
   if (!filtersLoaded) return <LoadingComponent message={t('loading')} />;
-  const labels = {
-    '1': 'Bachelor',
-    '2': 'Master',
-    '3': 'Ph.D.',
-    '4': 'Cross-faculty graduate and research school',
-    '5': 'Language course',
-    '6': 'Short course',
-    '56': 'Short course and language course',
-    '7': 'Prep course',
-    '9': 'Various',
-  };
+
   return (
     <>
       <Grid container columnSpacing={2} rowSpacing={2}>
-        <Grid item lg={2} md={2} xs={12}>
-          <Stack spacing={2}>
-            <Paper sx={{ boxShadow: 2 }}>
-              <CourseSearch />
-            </Paper>
-            <Paper sx={{ boxShadow: 2 }}>
-              <AppAccordion
-                title={t('course_type')}
-                childComp={
-                  <CheckboxButtons
-                    items={courseTypes}
-                    checked={courseParams.courseTypes}
-                    onChange={(items: string[]) => {
-                      dispatch(setCourseParams({ courseTypes: items }));
-                    }}
-                    labels={labels}
-                  />
-                }
-              />
-            </Paper>
-            <Paper sx={{ boxShadow: 2 }}>
-              <AppAccordion
-                title={t('course_language')}
-                childComp={
-                  <CheckboxButtons
-                    items={languages}
-                    checked={courseParams.languages}
-                    onChange={(items: string[]) =>
-                      dispatch(setCourseParams({ languages: items }))
-                    }
-                  />
-                }
-              />
-            </Paper>
-            <Paper sx={{ boxShadow: 2 }}>
-              <AppSelectCheckboxes
-                items={subjects}
-                checked={courseParams.subjects}
-                onChange={(items: string[]) =>
-                  dispatch(setCourseParams({ subjects: items }))
-                }
-                title={t('subject')}
-                placeholder={t('subject')}
-              />
-            </Paper>
-            <Paper sx={{ boxShadow: 2 }}>
-              <AppSelectCheckboxes
-                items={institutions}
-                checked={courseParams.institutions}
-                onChange={(items: string[]) =>
-                  dispatch(setCourseParams({ institutions: items }))
-                }
-                title={t('institution')}
-                placeholder={t('institution')}
-              />
-            </Paper>
+        {expanded && (
+          <Grid item lg={2} md={2} xs={12}>
+            <CourseFilters />
+          </Grid>
+        )}
 
-            <Paper sx={{ boxShadow: 2 }}>
-              <AppAccordion
-                title={t('istu9_u15')}
-                childComp={
-                  <>
-                    <FormGroup>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            checked={courseParams.isTu9}
-                            onClick={() => {
-                              dispatch(
-                                setCourseParams({ isTu9: !courseParams.isTu9 })
-                              );
-                            }}
-                          />
-                        }
-                        label="TU9"
-                      />
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            checked={courseParams.isU15}
-                            onClick={() => {
-                              dispatch(
-                                setCourseParams({ isU15: !courseParams.isU15 })
-                              );
-                            }}
-                          />
-                        }
-                        label="U15"
-                      />
-                    </FormGroup>
-                  </>
-                }
-              />
-            </Paper>
-            <Paper sx={{ paddingLeft: 2, boxShadow: 2, py: 0.6 }}>
-              <FormGroup>
-                <FormControlLabel
-                  control={
-                    <Checkbox
-                      checked={courseParams.hasArticles}
-                      onClick={() => {
-                        dispatch(
-                          setCourseParams({
-                            hasArticles: !courseParams.hasArticles,
-                          })
-                        );
-                      }}
-                    />
-                  }
-                  label={t('has_articles')}
-                />
-              </FormGroup>
-              {/* <CheckboxButtons
-                items={courseTypes}
-                checked={courseParams.courseTypes}
-                onChange={(items: string[]) =>
-                  dispatch(setCourseParams({ courseTypes: items }))
-                }
-                labels={labels}
-              /> */}
-            </Paper>
-            <Paper sx={{ paddingLeft: 2, boxShadow: 2, py: 0.6 }}>
-              <Typography color="text.secondary" gutterBottom sx={{ mt: 1 }}>
-                {t('performance')}
-              </Typography>
-              <FormGroup>
-                <FormControlLabel
-                  control={
-                    <Checkbox
-                      checked={courseParams.hideLanguageArticle}
-                      onClick={() => {
-                        dispatch(
-                          setCourseParams({
-                            hideLanguageArticle:
-                              !courseParams.hideLanguageArticle,
-                          })
-                        );
-                      }}
-                    />
-                  }
-                  label={t('hide_language_article')}
-                />
-              </FormGroup>
-            </Paper>
-          </Stack>
-        </Grid>
-        <Grid item lg={10} md={10} xs={12}>
+        <Grid item lg={expanded ? 10 : 12} md={expanded ? 10 : 12} xs={12}>
+          {/* <Grid item xs zeroMinWidth> */}
           <Paper sx={{ padding: 2, borderRadius: 3, boxShadow: 2 }}>
-            {/* <SwitchesGroup columns={columns} /> */}
             <CourseTable
               courses={courses}
               coursesLoaded={coursesLoaded}
               metaData={metaData}
+              expanded={expanded}
+              setExpanded={setExpanded}
             />
             {metaData && (
               <Box sx={{ mt: 2 }}>
@@ -252,20 +84,40 @@ export default function Programme() {
                 />
               </Box>
             )}
-            {/* <FormControlLabel
-              control={
-                <Switch
-                  checked={dense}
-                  onChange={handleChangeDense}
-                  color="primary"
-                />
-              }
-              label={t('dense_padding')}
-            /> */}
           </Paper>
         </Grid>
       </Grid>
-      {/* <Footer /> */}
+      {/* <Fab
+        size="small"
+        aria-label="collapsible panel"
+        sx={{
+          margin: 0,
+          top: 'auto',
+          right: 'auto',
+          bottom: 20,
+          left: 20,
+          position: 'fixed',
+        }}
+        onClick={() => setExpanded(!expanded)}
+        // sx={{
+        //   backgroundColor:
+        //     theme.palette.mode === 'dark' ? '#444950' : '#ebedf0',
+        //   color:
+        //     theme.palette.mode === 'dark'
+        //       ? theme.palette.grey[500]
+        //       : theme.palette.grey[700],
+        //   '&.MuiFab-root:hover': {
+        //     bgcolor:
+        //       theme.palette.mode === 'dark' ? '#606770' : '#dadde1',
+        //   },
+        // }}
+      >
+        {expanded ? (
+          <KeyboardDoubleArrowLeftIcon />
+        ) : (
+          <KeyboardDoubleArrowRightIcon />
+        )}
+      </Fab> */}
     </>
   );
 }
