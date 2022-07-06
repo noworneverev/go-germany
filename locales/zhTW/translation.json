@@ -78,6 +78,8 @@
   "home_button_programme": "搜尋學程",
   "home_button_article": "搜尋心得",
   "search_course_helpertext": "按學程名稱、學科種類、大學英文名稱或大學中文名稱進行搜尋",
-  "search_article_helpertext": "按作者、標題、文章來源、作者大學(碩士)學校、作者大學(碩士)科系或內文進行搜尋(支援全文檢索)"
+  "search_article_helpertext": "按作者、標題、文章來源、作者大學(碩士)學校、作者大學(碩士)科系或內文進行搜尋(支援全文檢索)",
+  "expand": "展開",
+  "collapse": "縮合"
 
 }
