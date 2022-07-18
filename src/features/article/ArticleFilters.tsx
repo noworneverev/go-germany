@@ -26,10 +26,6 @@ export default function ArticleFilters() {
   const { t } = useTranslation();
   const dispatch = useAppDispatch();
   const {
-    articles,
-    articlesLoaded,
-    metaData,
-    filtersLoaded,
     articleParams,
     sources,
     bsSchools,

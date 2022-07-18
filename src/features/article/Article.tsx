@@ -17,19 +17,7 @@ const courseTypeOptions = [
 
 export default function Article() {
   const { t } = useTranslation();
-  const { pathname } = useLocation();
-  const {
-    articles,
-    articlesLoaded,
-    metaData,
-    filtersLoaded,
-    articleParams,
-    sources,
-    bsSchools,
-    bsDepartments,
-    msSchools,
-    msDepartments,
-  } = useArticles();
+  const { articles, articlesLoaded, metaData, filtersLoaded } = useArticles();
   const dispatch = useAppDispatch();
   const [expanded, setExpanded] = useState(true);
 
