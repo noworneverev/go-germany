@@ -1,22 +1,22 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
-import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
-import { useTranslation } from 'react-i18next';
-import LanguageMenu from './LanguageMenu';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import { Link as RouterLink, useLocation, useNavigate } from 'react-router-dom';
-import BookmarkIcon from '@mui/icons-material/Bookmark';
-import { useAppDispatch, useAppSelector } from '../store/configureStore';
+import * as React from "react";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import Menu from "@mui/material/Menu";
+import MenuIcon from "@mui/icons-material/Menu";
+import Container from "@mui/material/Container";
+import Tooltip from "@mui/material/Tooltip";
+import MenuItem from "@mui/material/MenuItem";
+import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
+import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
+import { useTranslation } from "react-i18next";
+import LanguageMenu from "./LanguageMenu";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import { Link as RouterLink, useLocation, useNavigate } from "react-router-dom";
+import BookmarkIcon from "@mui/icons-material/Bookmark";
+import { useAppDispatch, useAppSelector } from "../store/configureStore";
 import {
   Badge,
   Link,
@@ -25,16 +25,17 @@ import {
   ListItemText,
   Stack,
   SvgIcon,
-} from '@mui/material';
-import { useEffect } from 'react';
+} from "@mui/material";
+import { useEffect } from "react";
 import {
   setBookmarkArticle,
   setBookmarkCourse,
-} from '../../features/bookmark/bookmarkSlice';
-import ScrollToOpacity from '../components/ScrollToOpacity';
-import AdminMenu from './AdminMenu';
-import usePageTracking from '../hooks/usePageTracking';
-import { ReactComponent as Dog } from '../../static/dog.svg';
+} from "../../features/bookmark/bookmarkSlice";
+import ScrollToOpacity from "../components/ScrollToOpacity";
+import AdminMenu from "./AdminMenu";
+import usePageTracking from "../hooks/usePageTracking";
+import { ReactComponent as Dog } from "../../static/dog.svg";
+import FeedbackIcon from "@mui/icons-material/Feedback";
 
 interface Props {
   darkMode: boolean;
@@ -55,26 +56,44 @@ const Header = ({ darkMode, handleThemeChange }: Props) => {
   const pages = [
     {
       index: 0,
-      page: t('programme_header'),
-      path: '/programme',
+      page: t("programme_header"),
+      path: "/programme",
       isAdmin: false,
     },
     {
       index: 1,
-      page: t('article_header'),
-      path: '/article',
+      page: t("article_header"),
+      path: "/article",
       isAdmin: false,
     },
     {
       index: 2,
-      page: t('feedback'),
-      path: '/feedback',
+      page: t("termin"),
+      path: "/termin",
       isAdmin: false,
     },
     {
       index: 3,
-      page: t('admin'),
-      path: '/admin',
+      page: t("faq"),
+      path: "/faq",
+      isAdmin: false,
+    },
+    // {
+    //   index: 4,
+    //   page: t("feedback"),
+    //   path: "/feedback",
+    //   isAdmin: false,
+    // },
+    {
+      index: 4,
+      page: t("about"),
+      path: "/about",
+      isAdmin: false,
+    },
+    {
+      index: 5,
+      page: t("admin"),
+      path: "/admin",
       isAdmin: true,
     },
   ];
@@ -126,8 +145,8 @@ const Header = ({ darkMode, handleThemeChange }: Props) => {
   };
 
   useEffect(() => {
-    const localStorageCourse = localStorage.getItem('course');
-    const localStorageArticle = localStorage.getItem('article');
+    const localStorageCourse = localStorage.getItem("course");
+    const localStorageArticle = localStorage.getItem("article");
     if (localStorageCourse) {
       dispatch(setBookmarkCourse(JSON.parse(localStorageCourse)));
     }
@@ -149,8 +168,8 @@ const Header = ({ darkMode, handleThemeChange }: Props) => {
         color="inherit"
         position="sticky"
         sx={{
-          maxHeight: '60px',
-          justifyContent: 'center',
+          maxHeight: "60px",
+          justifyContent: "center",
         }}
       >
         <Container maxWidth="xl">
@@ -158,7 +177,7 @@ const Header = ({ darkMode, handleThemeChange }: Props) => {
             <SvgIcon
               component={Dog}
               inheritViewBox
-              sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}
+              sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
             />
             {/* <ExploreIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
             <Typography
@@ -168,19 +187,19 @@ const Header = ({ darkMode, handleThemeChange }: Props) => {
               to="/"
               sx={{
                 mr: 2,
-                display: { xs: 'none', md: 'flex' },
-                fontFamily: 'monospace',
+                display: { xs: "none", md: "flex" },
+                fontFamily: "monospace",
                 fontWeight: 700,
-                letterSpacing: '0.05rem',
-                color: 'inherit',
-                textDecoration: 'none',
+                letterSpacing: "0.05rem",
+                color: "inherit",
+                textDecoration: "none",
               }}
               onClick={() => setSelectedIndex(-1)}
             >
               Go Germany
             </Typography>
 
-            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
               <IconButton
                 size="large"
                 aria-label="account of current user"
@@ -195,18 +214,18 @@ const Header = ({ darkMode, handleThemeChange }: Props) => {
                 id="menu-appbar"
                 anchorEl={anchorElNav}
                 anchorOrigin={{
-                  vertical: 'bottom',
-                  horizontal: 'left',
+                  vertical: "bottom",
+                  horizontal: "left",
                 }}
                 keepMounted
                 transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'left',
+                  vertical: "top",
+                  horizontal: "left",
                 }}
                 open={Boolean(anchorElNav)}
                 onClose={handleCloseNavMenu}
                 sx={{
-                  display: { xs: 'block', md: 'none' },
+                  display: { xs: "block", md: "none" },
                 }}
               >
                 {pages.map(({ page, path, isAdmin }) => {
@@ -228,7 +247,7 @@ const Header = ({ darkMode, handleThemeChange }: Props) => {
             <SvgIcon
               component={Dog}
               inheritViewBox
-              sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }}
+              sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}
             />
             {/* <ExploreIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
             <Typography
@@ -238,20 +257,29 @@ const Header = ({ darkMode, handleThemeChange }: Props) => {
               to="/"
               sx={{
                 mr: 2,
-                display: { xs: 'flex', md: 'none' },
+                display: { xs: "flex", md: "none" },
                 flexGrow: 1,
-                fontFamily: 'monospace',
+                fontFamily: "monospace",
                 fontWeight: 700,
-                letterSpacing: '0.05rem',
-                color: 'inherit',
-                textDecoration: 'none',
+                letterSpacing: "0.05rem",
+                color: "inherit",
+                textDecoration: "none",
               }}
               onClick={() => setSelectedIndex(-1)}
             >
               Go Germany
             </Typography>
-            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-              <List component={Stack} direction="row">
+            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+              <List
+                component={Stack}
+                direction="row"
+                sx={{
+                  "& .MuiButtonBase-root": {
+                    paddingTop: 0,
+                    paddingBottom: 0,
+                  },
+                }}
+              >
                 {pages.map(({ page, path, isAdmin, index }) => {
                   if (user || !isAdmin) {
                     return (
@@ -260,7 +288,9 @@ const Header = ({ darkMode, handleThemeChange }: Props) => {
                         component={RouterLink}
                         to={path}
                         button
-                        sx={{ borderRadius: 2 }}
+                        sx={{
+                          borderRadius: 2,
+                        }}
                         selected={selectedIndex === index}
                         onClick={() => setSelectedIndex(index)}
                       >
@@ -272,7 +302,13 @@ const Header = ({ darkMode, handleThemeChange }: Props) => {
                           }
                           sx={{ borderRadius: 2 }}
                         > */}
-                        <ListItemText primary={page} />
+                        <ListItemText
+                          primary={page}
+                          sx={{
+                            display: "flex",
+                            justifyContent: "center",
+                          }}
+                        />
                         {/* </ListItemButton> */}
                       </ListItem>
 
@@ -309,21 +345,21 @@ const Header = ({ darkMode, handleThemeChange }: Props) => {
               })} */}
             </Box>
 
-            <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
+            <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
               <LanguageMenu />
             </Box>
             <Box sx={{ flexGrow: 0 }}>
               <IconButton
                 component={RouterLink}
                 to="/bookmark"
-                sx={{ color: 'inherit' }}
+                sx={{ color: "inherit" }}
                 onClick={() => setSelectedIndex(-1)}
               >
                 <Badge
                   badgeContent={courses.length + articles.length}
                   color="secondary"
                 >
-                  <Tooltip title={t('bookmark_header')}>
+                  <Tooltip title={t("bookmark_header")}>
                     <BookmarkIcon />
                   </Tooltip>
                 </Badge>
@@ -334,7 +370,7 @@ const Header = ({ darkMode, handleThemeChange }: Props) => {
               <Tooltip title="Github repository">
                 <Link
                   target="_blank"
-                  href={'https://github.com/noworneverev/go-germany'}
+                  href={"https://github.com/noworneverev/go-germany"}
                   underline="none"
                   color="inherit"
                 >
@@ -344,26 +380,40 @@ const Header = ({ darkMode, handleThemeChange }: Props) => {
                 </Link>
               </Tooltip>
             </Box>
+
+            <Box sx={{ flexGrow: 0 }}>
+              <IconButton
+                component={RouterLink}
+                to="/feedback"
+                sx={{ color: "inherit" }}
+                onClick={() => setSelectedIndex(-1)}
+              >
+                <Tooltip title={t("feedback")}>
+                  <FeedbackIcon />
+                </Tooltip>
+              </IconButton>
+            </Box>
+
             <Box sx={{ flexGrow: 0 }}>
               {darkMode ? (
-                <Tooltip title={t('darkmode')}>
+                <Tooltip title={t("darkmode")}>
                   <IconButton onClick={handleThemeChange} color="inherit">
                     <DarkModeOutlinedIcon />
                   </IconButton>
                 </Tooltip>
               ) : (
-                <Tooltip title={t('lightmode')}>
+                <Tooltip title={t("lightmode")}>
                   <IconButton onClick={handleThemeChange} color="inherit">
                     <LightModeOutlinedIcon />
                   </IconButton>
                 </Tooltip>
               )}
             </Box>
-            <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
+            <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
               {user && <Typography sx={{ mx: 1 }}>Admin</Typography>}
             </Box>
 
-            <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
+            <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
               <AdminMenu user={user} />
             </Box>
 
