@@ -43,10 +43,7 @@ export default function About() {
             <Typography variant="h5" component="div" gutterBottom>
               Star Go Germany / VISA Termin Alert
             </Typography>
-            <Typography variant="body1">
-              If you like this site or find the Termin LINE group helpful, give
-              it a star on Github.
-            </Typography>
+            <Typography variant="body1">{t("star")}</Typography>
             <ul>
               <li>
                 Go Germany
@@ -152,17 +149,6 @@ export default function About() {
               </li>
             </ul>
           </CardContent>
-          <CardActions>
-            <Link
-              component={Button}
-              underline="none"
-              target="_blank"
-              rel="noopener"
-              href="https://noworneverev.github.io/"
-            >
-              {t("learnmore")}
-            </Link>
-          </CardActions>
         </Card>
 
         <Card sx={{ minWidth: 275 }}>
