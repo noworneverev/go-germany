@@ -8,21 +8,20 @@ import {
   Typography,
 } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import {
-  qa,
-  qaAccount,
-  qaAcknowledgements,
-  qaAn,
-  qaCoracle,
-  qaExpatrio,
-  qaPlane,
-  qaRoutine,
-  qaVisa,
-  qaWise,
-} from "./qa";
+
 import TableOfContent from "../../app/components/TableOfContent";
 import QaAccordions from "./QaAccordions";
 import LoadingComponent from "../../app/layout/LoadingComponent";
+import { qa } from "./qa";
+import { qaPlane } from "./qaPlane";
+import { qaAccount } from "./qaAccount";
+import { qaAcknowledgements } from "./qaAcknowledgements";
+import { qaAn } from "./qaAn";
+import { qaCoracle } from "./qaCoracle.";
+import { qaExpatrio } from "./qaExpatrio";
+import { qaRoutine } from "./qaRoutine";
+import { qaVisa } from "./qaVisa";
+import { qaWise } from "./qaWise";
 
 const all = qaPlane.concat(
   qaAccount,
@@ -84,7 +83,7 @@ export default function Faq() {
           <Grid item justifyContent="flex-end">
             <Typography variant="caption">
               <i>
-                Last updated on <b>Aug 29, 2022</b> by <b>Yan-Ying Liao</b>
+                Last updated on <b>Aug 30, 2022</b> by <b>Yan-Ying Liao</b>
               </i>
             </Typography>
           </Grid>
