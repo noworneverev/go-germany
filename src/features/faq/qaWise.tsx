@@ -1,4 +1,4 @@
-import { Typography, Link, Box } from "@mui/material";
+import { Typography, Link } from "@mui/material";
 
 export const qaWise = [
   {

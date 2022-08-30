@@ -1,11 +1,11 @@
-import { Grid } from '@mui/material';
-import { useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
+import { Grid } from "@mui/material";
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Feedback() {
   const { t } = useTranslation();
   useEffect(() => {
-    document.title = `${t('feedback')} | Go Germany`;
+    document.title = `${t("feedback")} | Go Germany`;
   }, [t]);
   return (
     <Grid
@@ -15,7 +15,7 @@ export default function Feedback() {
       alignItems="center"
       justifyContent="center"
       sx={{
-        minHeight: '100vh',
+        minHeight: "100vh",
       }}
     >
       <Grid item xs={3}>
@@ -26,6 +26,7 @@ export default function Feedback() {
           frameBorder={0}
           marginHeight={0}
           marginWidth={0}
+          title="Feedback"
         >
           載入中…
         </iframe>

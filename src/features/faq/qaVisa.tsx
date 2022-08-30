@@ -114,7 +114,7 @@ export const qaVisa = [
           </Link>{" "}
           密碼termin
         </Typography>
-        <img src={LineGroup} width="230" />
+        <img src={LineGroup} width="230" alt="LINE Group" />
       </>
     ),
   },

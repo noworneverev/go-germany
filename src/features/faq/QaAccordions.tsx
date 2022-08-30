@@ -1,7 +1,6 @@
 import { Typography, Divider } from "@mui/material";
-import React, { useState } from "react";
+import React from "react";
 import AppQaAccordion from "../../app/components/AppQaAccordion";
-import LoadingComponent from "../../app/layout/LoadingComponent";
 import { qa } from "./qa";
 import Tips from "./Tips";
 

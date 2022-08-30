@@ -9,18 +9,17 @@ import {
   TableBody,
   Stack,
   Chip,
-  Link,
-} from '@mui/material';
-import { useState } from 'react';
-import { Course } from '../../app/models/course';
-import { renderResultChip } from './ArticlesTooltip';
-import LaunchIcon from '@mui/icons-material/Launch';
-import { useTranslation } from 'react-i18next';
-import StyledTableCell from '../../app/components/StyledTableCell';
-import StyledTableRow from '../../app/components/StyledTableRow';
-import DensityMenu from '../../app/components/DensityMenu';
-import { renderDate } from '../../app/utils/utils';
-import StyledLink from '../../app/components/StyledLink';
+} from "@mui/material";
+import { useState } from "react";
+import { Course } from "../../app/models/course";
+import { renderResultChip } from "./ArticlesTooltip";
+import LaunchIcon from "@mui/icons-material/Launch";
+import { useTranslation } from "react-i18next";
+import StyledTableCell from "../../app/components/StyledTableCell";
+import StyledTableRow from "../../app/components/StyledTableRow";
+import DensityMenu from "../../app/components/DensityMenu";
+import { renderDate } from "../../app/utils/utils";
+import StyledLink from "../../app/components/StyledLink";
 
 interface Props {
   course: Course;
@@ -33,25 +32,25 @@ function isColmnNeeded(course: Course, columnName: string) {
   for (let i = 0; i < course.articles.length; i++) {
     const article = course.articles[i];
     switch (columnName) {
-      case 'author_ms_school':
+      case "author_ms_school":
         if (article.author_ms_school) return true;
         break;
-      case 'author_toefl':
+      case "author_toefl":
         if (article.author_toefl) return true;
         break;
-      case 'author_ielts':
+      case "author_ielts":
         if (article.author_ielts) return true;
         break;
-      case 'author_gre':
+      case "author_gre":
         if (article.author_gre) return true;
         break;
-      case 'author_gmat':
+      case "author_gmat":
         if (article.author_gmat) return true;
         break;
-      case 'author_testdaf':
+      case "author_testdaf":
         if (article.author_testdaf) return true;
         break;
-      case 'author_goethe':
+      case "author_goethe":
         if (article.author_goethe) return true;
         break;
       default:
@@ -72,15 +71,15 @@ export default function ExperienceTable({ course }: Props) {
     <Paper sx={{ padding: 2, borderRadius: 3, m: 1, mt: 2, boxShadow: 3 }}>
       <Box display="flex" justifyContent="space-between">
         <Typography color="text.secondary" variant="h5" gutterBottom>
-          {t('experience')}
+          {t("experience")}
         </Typography>
         <DensityMenu dense={dense} handleChangeDense={handleChangeDense} />
       </Box>
       <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 700 }} size={dense ? 'small' : 'medium'}>
+        <Table sx={{ minWidth: 700 }} size={dense ? "small" : "medium"}>
           <TableHead>
             <TableRow>
-              <StyledTableCell>{t('author')}</StyledTableCell>
+              <StyledTableCell>{t("author")}</StyledTableCell>
               <StyledTableCell>
                 <Box
                 // sx={{
@@ -89,45 +88,45 @@ export default function ExperienceTable({ course }: Props) {
                 //   flexWrap: 'wrap',
                 // }}
                 >
-                  {t('title')}
+                  {t("title")}
                   <LaunchIcon fontSize="small" sx={{ ml: 1 }} />
                 </Box>
               </StyledTableCell>
-              <StyledTableCell>{t('result')}</StyledTableCell>
-              <StyledTableCell>{t('published_date')}</StyledTableCell>
-              <StyledTableCell>{t('source')}</StyledTableCell>
-              <StyledTableCell>{t('author_bs_school')}</StyledTableCell>
+              <StyledTableCell>{t("result")}</StyledTableCell>
+              <StyledTableCell>{t("published_date")}</StyledTableCell>
+              <StyledTableCell>{t("source")}</StyledTableCell>
+              <StyledTableCell>{t("author_bs_school")}</StyledTableCell>
               {/* <StyledTableCell>{t('author_bs_school_short')}</StyledTableCell> */}
-              <StyledTableCell>{t('author_bs_department')}</StyledTableCell>
-              <StyledTableCell>{t('author_bs_gpa')}</StyledTableCell>
-              {isColmnNeeded(course, 'author_ms_school') && (
+              <StyledTableCell>{t("author_bs_department")}</StyledTableCell>
+              <StyledTableCell>{t("author_bs_gpa")}</StyledTableCell>
+              {isColmnNeeded(course, "author_ms_school") && (
                 <>
-                  <StyledTableCell>{t('author_ms_school')}</StyledTableCell>
+                  <StyledTableCell>{t("author_ms_school")}</StyledTableCell>
                   {/* <StyledTableCell>
                       {t('author_ms_school_short')}
                     </StyledTableCell> */}
-                  <StyledTableCell>{t('author_ms_department')}</StyledTableCell>
-                  <StyledTableCell>{t('author_ms_gpa')}</StyledTableCell>
+                  <StyledTableCell>{t("author_ms_department")}</StyledTableCell>
+                  <StyledTableCell>{t("author_ms_gpa")}</StyledTableCell>
                 </>
               )}
-              {isColmnNeeded(course, 'author_toefl') && (
-                <StyledTableCell>{t('toefl')}</StyledTableCell>
+              {isColmnNeeded(course, "author_toefl") && (
+                <StyledTableCell>{t("toefl")}</StyledTableCell>
               )}
-              {isColmnNeeded(course, 'author_ielts') && (
-                <StyledTableCell>{t('ielts')}</StyledTableCell>
+              {isColmnNeeded(course, "author_ielts") && (
+                <StyledTableCell>{t("ielts")}</StyledTableCell>
               )}
 
-              {isColmnNeeded(course, 'author_gre') && (
-                <StyledTableCell>{t('gre')}</StyledTableCell>
+              {isColmnNeeded(course, "author_gre") && (
+                <StyledTableCell>{t("gre")}</StyledTableCell>
               )}
-              {isColmnNeeded(course, 'author_gmat') && (
-                <StyledTableCell>{t('gmat')}</StyledTableCell>
+              {isColmnNeeded(course, "author_gmat") && (
+                <StyledTableCell>{t("gmat")}</StyledTableCell>
               )}
-              {isColmnNeeded(course, 'author_testdaf') && (
-                <StyledTableCell>{t('testdaf')}</StyledTableCell>
+              {isColmnNeeded(course, "author_testdaf") && (
+                <StyledTableCell>{t("testdaf")}</StyledTableCell>
               )}
-              {isColmnNeeded(course, 'author_goethe') && (
-                <StyledTableCell>{t('goethe')}</StyledTableCell>
+              {isColmnNeeded(course, "author_goethe") && (
+                <StyledTableCell>{t("goethe")}</StyledTableCell>
               )}
             </TableRow>
           </TableHead>
@@ -165,7 +164,7 @@ export default function ExperienceTable({ course }: Props) {
                     </StyledTableCell> */}
                   <StyledTableCell>{row.author_bs_department}</StyledTableCell>
                   <StyledTableCell>{row.author_bs_gpa}</StyledTableCell>
-                  {isColmnNeeded(course, 'author_ms_school') && (
+                  {isColmnNeeded(course, "author_ms_school") && (
                     <>
                       <StyledTableCell>{row.author_ms_school}</StyledTableCell>
                       {/* <StyledTableCell>
@@ -177,23 +176,23 @@ export default function ExperienceTable({ course }: Props) {
                       <StyledTableCell>{row.author_ms_gpa}</StyledTableCell>
                     </>
                   )}
-                  {isColmnNeeded(course, 'author_toefl') && (
+                  {isColmnNeeded(course, "author_toefl") && (
                     <StyledTableCell>{row.author_toefl}</StyledTableCell>
                   )}
-                  {isColmnNeeded(course, 'author_ielts') && (
+                  {isColmnNeeded(course, "author_ielts") && (
                     <StyledTableCell>{row.author_ielts}</StyledTableCell>
                   )}
 
-                  {isColmnNeeded(course, 'author_gre') && (
+                  {isColmnNeeded(course, "author_gre") && (
                     <StyledTableCell>{row.author_gre}</StyledTableCell>
                   )}
-                  {isColmnNeeded(course, 'author_gmat') && (
+                  {isColmnNeeded(course, "author_gmat") && (
                     <StyledTableCell>{row.author_gmat}</StyledTableCell>
                   )}
-                  {isColmnNeeded(course, 'author_testdaf') && (
+                  {isColmnNeeded(course, "author_testdaf") && (
                     <StyledTableCell>{row.author_testdaf}</StyledTableCell>
                   )}
-                  {isColmnNeeded(course, 'author_goethe') && (
+                  {isColmnNeeded(course, "author_goethe") && (
                     <StyledTableCell>{row.author_goethe}</StyledTableCell>
                   )}
                 </StyledTableRow>

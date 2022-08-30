@@ -8,11 +8,9 @@ import {
   Typography,
 } from "@mui/material";
 import { useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import School from "../../static/undraw_back_to_school_inwc.svg";
-import Dog from "../../static/dog.svg";
 import { useTranslation } from "react-i18next";
-import ReactGA from "react-ga4";
 import { ReactComponent as SvgDog } from "../../static/dog.svg";
 
 export default function HomePage() {
@@ -123,7 +121,11 @@ export default function HomePage() {
             display="flex"
             sx={{ mb: 3 }}
           >
-            <img src={School} style={{ height: "auto", maxWidth: "100%" }} />
+            <img
+              src={School}
+              style={{ height: "auto", maxWidth: "100%" }}
+              alt="Home"
+            />
           </Grid>
         </Grid>
       </Container>

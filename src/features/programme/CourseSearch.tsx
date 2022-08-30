@@ -1,16 +1,10 @@
-import {
-  debounce,
-  IconButton,
-  InputAdornment,
-  TextField,
-  Tooltip,
-} from '@mui/material';
-import React, { useState } from 'react';
-import { useAppDispatch, useAppSelector } from '../../app/store/configureStore';
-import { setCourseParams } from './programmeSlice';
-import SearchIcon from '@mui/icons-material/Search';
-import { useTranslation } from 'react-i18next';
-import ReactGA from 'react-ga4';
+import { debounce, InputAdornment, TextField, Tooltip } from "@mui/material";
+import { useState } from "react";
+import { useAppDispatch, useAppSelector } from "../../app/store/configureStore";
+import { setCourseParams } from "./programmeSlice";
+import SearchIcon from "@mui/icons-material/Search";
+import { useTranslation } from "react-i18next";
+import ReactGA from "react-ga4";
 
 export default function CourseSearch() {
   const { courseParams } = useAppSelector((state) => state.programme);
@@ -20,23 +14,23 @@ export default function CourseSearch() {
   const debouncedSearch = debounce((event: any) => {
     dispatch(setCourseParams({ searchTerm: event.target.value }));
     if (
-      !window.location.href.includes('localhost') &&
+      !window.location.href.includes("localhost") &&
       process.env.REACT_APP_MEASUREMENT_ID
     ) {
       ReactGA.event({
-        category: 'search',
+        category: "search",
         action: `Search programme: ${event.target.value}`,
       });
     }
   }, 1000);
 
   return (
-    <Tooltip title={t('search_course_helpertext')} arrow placement="right">
+    <Tooltip title={t("search_course_helpertext")} arrow placement="right">
       <TextField
-        label={t('search_programmes')}
+        label={t("search_programmes")}
         variant="outlined"
         fullWidth
-        value={searchTerm || ''}
+        value={searchTerm || ""}
         onChange={(event: any) => {
           setSearchTerm(event.target.value);
           debouncedSearch(event);

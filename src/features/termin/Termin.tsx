@@ -1,11 +1,4 @@
-import {
-  Alert,
-  Container,
-  Divider,
-  Link,
-  Stack,
-  Typography,
-} from "@mui/material";
+import { Container, Divider, Link, Typography } from "@mui/material";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import LinePreview from "../../static/termin.png";
@@ -24,7 +17,7 @@ export default function Termin() {
       <Typography gutterBottom>
         德國簽證自動通知群組，有新名額釋出會自動發送訊息通知，通知機器人每年5~9月24小時運行，通知6~8月及9/1~9/7是否有預約名額。
       </Typography>
-      <img src={LinePreview} width="287" />
+      <img src={LinePreview} width="287" alt="preview of notification" />
 
       <Typography variant="h4" mt={3}>
         {t("line")}
@@ -41,7 +34,7 @@ export default function Termin() {
         </Link>{" "}
         密碼termin
       </Typography>
-      <img src={LineGroup} width="230" />
+      <img src={LineGroup} width="230" alt="Line group invitation link" />
       <Typography variant="h4" mt={3}>
         Github
       </Typography>

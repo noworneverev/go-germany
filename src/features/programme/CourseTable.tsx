@@ -11,31 +11,31 @@ import {
   Tooltip,
   Box,
   Stack,
-} from '@mui/material';
-import ArticlesTooltip from './ArticlesTooltip';
-import CheckIcon from '@mui/icons-material/Check';
-import { useTranslation } from 'react-i18next';
-import { Course } from '../../app/models/course';
-import { MetaData } from '../../app/models/pagination';
-import VisibilityIcon from '@mui/icons-material/Visibility';
-import { Link as RouterLink } from 'react-router-dom';
-import LaunchIcon from '@mui/icons-material/Launch';
-import { useAppDispatch } from '../../app/store/configureStore';
+} from "@mui/material";
+import ArticlesTooltip from "./ArticlesTooltip";
+import CheckIcon from "@mui/icons-material/Check";
+import { useTranslation } from "react-i18next";
+import { Course } from "../../app/models/course";
+import { MetaData } from "../../app/models/pagination";
+import VisibilityIcon from "@mui/icons-material/Visibility";
+import { Link as RouterLink } from "react-router-dom";
+import LaunchIcon from "@mui/icons-material/Launch";
+import { useAppDispatch } from "../../app/store/configureStore";
 import {
   addBookmarkCourseItem,
   removeBookmarkCourseItem,
   setBookmarkCourse,
-} from '../bookmark/bookmarkSlice';
-import DeleteIcon from '@mui/icons-material/Delete';
-import BookmarkAddIcon from '@mui/icons-material/BookmarkAdd';
-import { Dispatch, SetStateAction, useState } from 'react';
-import CourseColumnSwitches from './CourseColumnSwitches';
-import DensityMenu from '../../app/components/DensityMenu';
-import StyledTableCell from '../../app/components/StyledTableCell';
-import StyledTableRow from '../../app/components/StyledTableRow';
-import ReactGA from 'react-ga4';
-import StyledLink from '../../app/components/StyledLink';
-import AppExpandButton from '../../app/components/AppExpandButton';
+} from "../bookmark/bookmarkSlice";
+import DeleteIcon from "@mui/icons-material/Delete";
+import BookmarkAddIcon from "@mui/icons-material/BookmarkAdd";
+import { Dispatch, SetStateAction, useState } from "react";
+import CourseColumnSwitches from "./CourseColumnSwitches";
+import DensityMenu from "../../app/components/DensityMenu";
+import StyledTableCell from "../../app/components/StyledTableCell";
+import StyledTableRow from "../../app/components/StyledTableRow";
+import ReactGA from "react-ga4";
+import StyledLink from "../../app/components/StyledLink";
+import AppExpandButton from "../../app/components/AppExpandButton";
 
 interface Props {
   coursesLoaded: boolean;
@@ -49,24 +49,24 @@ interface Props {
 
 export const renderCourseType = (type: string) => {
   switch (type) {
-    case '1':
-      return <Chip label="Bachelor" color="default" size={'small'} />;
-    case '2':
-      return <Chip label="Master" color="primary" size={'small'} />;
-    case '3':
-      return <Chip label="Ph.D." color="success" size={'small'} />;
-    case '4':
+    case "1":
+      return <Chip label="Bachelor" color="default" size={"small"} />;
+    case "2":
+      return <Chip label="Master" color="primary" size={"small"} />;
+    case "3":
+      return <Chip label="Ph.D." color="success" size={"small"} />;
+    case "4":
       return <div>Cross-faculty graduate and research school</div>;
-    case '5':
-      return <Chip label="Language course" size={'small'} />;
-    case '6':
-      return <Chip label="Short course" size={'small'} />;
-    case '56':
+    case "5":
+      return <Chip label="Language course" size={"small"} />;
+    case "6":
+      return <Chip label="Short course" size={"small"} />;
+    case "56":
       return <div>Short course and language course</div>;
-    case '7':
-      return <Chip label="Prep course" size={'small'} />;
-    case '9':
-      return <Chip label="Various" size={'small'} />;
+    case "7":
+      return <Chip label="Prep course" size={"small"} />;
+    case "9":
+      return <Chip label="Various" size={"small"} />;
     default:
       break;
   }
@@ -90,16 +90,16 @@ export default function CourseTable({
     setDense(dense);
   };
 
-  const columns = [
-    { name: 'programme', label: t('course_name'), hidden: true },
-    { name: 'language', label: t('course_language'), hidden: true },
-    { name: 'courseType', label: t('course_type'), hidden: true },
-    { name: 'subject', label: t('subject'), hidden: true },
-    { name: 'university', label: t('university_name'), hidden: true },
-    { name: 'tu9', label: 'TU9', hidden: true },
-    { name: 'u15', label: 'U15', hidden: true },
-    { name: 'article', label: t('article'), hidden: true },
-  ];
+  // const columns = [
+  //   { name: 'programme', label: t('course_name'), hidden: true },
+  //   { name: 'language', label: t('course_language'), hidden: true },
+  //   { name: 'courseType', label: t('course_type'), hidden: true },
+  //   { name: 'subject', label: t('subject'), hidden: true },
+  //   { name: 'university', label: t('university_name'), hidden: true },
+  //   { name: 'tu9', label: 'TU9', hidden: true },
+  //   { name: 'u15', label: 'U15', hidden: true },
+  //   { name: 'article', label: t('article'), hidden: true },
+  // ];
 
   const [columnState, setColumnState] = useState({
     programme: true,
@@ -137,8 +137,8 @@ export default function CourseTable({
   const dispatch = useAppDispatch();
 
   let skeletonArray = [];
-  if (metaData) skeletonArray = Array(metaData?.page_size).fill('');
-  else skeletonArray = Array(10).fill('');
+  if (metaData) skeletonArray = Array(metaData?.page_size).fill("");
+  else skeletonArray = Array(10).fill("");
 
   return (
     <>
@@ -158,7 +158,7 @@ export default function CourseTable({
         <Table
           sx={{ minWidth: 700 }}
           aria-label="customized table"
-          size={dense ? 'small' : 'medium'}
+          size={dense ? "small" : "medium"}
         >
           <TableHead>
             <TableRow>
@@ -172,19 +172,19 @@ export default function CourseTable({
                   //   flexWrap: 'wrap',
                   // }}
                   >
-                    {t('course_name')}
+                    {t("course_name")}
                     <LaunchIcon fontSize="small" sx={{ ml: 1 }} />
                   </Box>
                 </StyledTableCell>
               )}
               {columnState.language && (
-                <StyledTableCell>{t('course_language')}</StyledTableCell>
+                <StyledTableCell>{t("course_language")}</StyledTableCell>
               )}
               {columnState.courseType && (
-                <StyledTableCell>{t('course_type')}</StyledTableCell>
+                <StyledTableCell>{t("course_type")}</StyledTableCell>
               )}
               {columnState.subject && (
-                <StyledTableCell>{t('subject')}</StyledTableCell>
+                <StyledTableCell>{t("subject")}</StyledTableCell>
               )}
               {columnState.university && (
                 <StyledTableCell>
@@ -195,7 +195,7 @@ export default function CourseTable({
                   //   flexWrap: 'wrap',
                   // }}
                   >
-                    {t('university_name')}
+                    {t("university_name")}
                     <LaunchIcon fontSize="small" sx={{ ml: 1 }} />
                   </Box>
                 </StyledTableCell>
@@ -211,7 +211,7 @@ export default function CourseTable({
                   //   flexWrap: 'wrap',
                   // }}
                   >
-                    {t('article')}
+                    {t("article")}
                     <LaunchIcon fontSize="small" sx={{ ml: 1 }} />
                   </Box>
                 </StyledTableCell>
@@ -279,7 +279,7 @@ export default function CourseTable({
               courses.map((row) => (
                 <StyledTableRow key={row.id}>
                   <StyledTableCell align="justify" size="small">
-                    <Tooltip title={t('view')}>
+                    <Tooltip title={t("view")}>
                       <IconButton
                         component={RouterLink}
                         to={`/programme/${row.id}`}
@@ -300,7 +300,7 @@ export default function CourseTable({
                         //   {row.name_en}
                         // </Link>
                         <StyledLink
-                          href={'https://www2.daad.de' + row.daadlink}
+                          href={"https://www2.daad.de" + row.daadlink}
                           text={row.name_en}
                         />
                       ) : (
@@ -346,12 +346,12 @@ export default function CourseTable({
                   )}
                   {columnState.tu9 && (
                     <StyledTableCell>
-                      {row.is_tu9 ? <CheckIcon /> : ''}
+                      {row.is_tu9 ? <CheckIcon /> : ""}
                     </StyledTableCell>
                   )}
                   {columnState.u15 && (
                     <StyledTableCell>
-                      {row.is_u15 ? <CheckIcon /> : ''}
+                      {row.is_u15 ? <CheckIcon /> : ""}
                     </StyledTableCell>
                   )}
                   {columnState.article && (
@@ -368,7 +368,7 @@ export default function CourseTable({
                         color="error"
                         onClick={() => {
                           removeBookmarkCourseItem(row);
-                          const courses = localStorage.getItem('course');
+                          const courses = localStorage.getItem("course");
                           if (courses) {
                             dispatch(setBookmarkCourse(JSON.parse(courses)));
                           }
@@ -377,22 +377,22 @@ export default function CourseTable({
                         <DeleteIcon fontSize="inherit" />
                       </IconButton>
                     ) : (
-                      <Tooltip title={t('bookmark')}>
+                      <Tooltip title={t("bookmark")}>
                         <IconButton
                           onClick={() => {
                             // addBookmarkCourseItem(row.id);
                             addBookmarkCourseItem(row);
                             if (
-                              !window.location.href.includes('localhost') &&
+                              !window.location.href.includes("localhost") &&
                               process.env.REACT_APP_MEASUREMENT_ID
                             ) {
                               ReactGA.event({
-                                category: 'bookmark/programme',
+                                category: "bookmark/programme",
                                 action: `Bookmark Programme: ${row.id} ${row.name_en}`,
                               });
                             }
 
-                            const courses = localStorage.getItem('course');
+                            const courses = localStorage.getItem("course");
                             if (courses) {
                               dispatch(setBookmarkCourse(JSON.parse(courses)));
                             }

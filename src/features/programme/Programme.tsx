@@ -1,15 +1,15 @@
-import Paper from '@mui/material/Paper';
-import { Grid } from '@mui/material';
-import { useEffect, useState } from 'react';
-import LoadingComponent from '../../app/layout/LoadingComponent';
-import { useTranslation } from 'react-i18next';
-import { Box } from '@mui/system';
-import useCourses from '../../app/hooks/useCourses';
-import AppPagination from '../../app/components/AppPagination';
-import { setPageNumber } from './programmeSlice';
-import { useAppDispatch } from '../../app/store/configureStore';
-import CourseTable from './CourseTable';
-import CourseFilters from './CourseFilters';
+import Paper from "@mui/material/Paper";
+import { Grid } from "@mui/material";
+import { useEffect, useState } from "react";
+import LoadingComponent from "../../app/layout/LoadingComponent";
+import { useTranslation } from "react-i18next";
+import { Box } from "@mui/system";
+import useCourses from "../../app/hooks/useCourses";
+import AppPagination from "../../app/components/AppPagination";
+import { setPageNumber } from "./programmeSlice";
+import { useAppDispatch } from "../../app/store/configureStore";
+import CourseTable from "./CourseTable";
+import CourseFilters from "./CourseFilters";
 
 export default function Programme() {
   const { t } = useTranslation();
@@ -23,12 +23,12 @@ export default function Programme() {
   const dispatch = useAppDispatch();
 
   const [expanded, setExpanded] = useState(true);
-  const handleChangeExpanded = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setExpanded(event.target.checked);
-  };
+  // const handleChangeExpanded = (event: React.ChangeEvent<HTMLInputElement>) => {
+  //   setExpanded(event.target.checked);
+  // };
 
   useEffect(() => {
-    document.title = `${t('programme_header')} | Go Germany`;
+    document.title = `${t("programme_header")} | Go Germany`;
   }, [t]);
 
   // useEffect(() => {
@@ -50,7 +50,7 @@ export default function Programme() {
   // }, [pageNumber, pageSize]);
 
   // if (!coursesLoaded) return <LoadingComponent message={t('loading')} />;
-  if (!filtersLoaded) return <LoadingComponent message={t('loading')} />;
+  if (!filtersLoaded) return <LoadingComponent message={t("loading")} />;
 
   return (
     <>
