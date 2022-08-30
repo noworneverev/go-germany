@@ -241,7 +241,7 @@ const Header = ({ darkMode, handleThemeChange }: Props) => {
                   }
                 })}
                 <LanguageMenu />
-                <AdminMenu user={user} />
+                {/* <AdminMenu user={user} /> */}
               </Menu>
             </Box>
             <SvgIcon
