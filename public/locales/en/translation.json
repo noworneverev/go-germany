@@ -80,6 +80,18 @@
   "search_course_helpertext": "Search by course's name, course's subject, university's English name or university's Chinese name",
   "search_article_helpertext": "Search by author, title, source, bachelor's (master's) university, bachelor's (master's) department, or the content of the article.(Full-text search supported)",
   "expand": "Expand",
-  "collapse": "Collapse"
-
+  "collapse": "Collapse",
+  "faq":"FAQs",
+  "termin": "Termin Alert",
+  "about": "About",
+  "aboutme": "About me",
+  "donate": "Become a supporter",
+  "bio": "I'm Yan-Ying Liao, currently pursing a degree at RWTH Aachen University.",
+  "learnmore": "Learn more",
+  "donate_message": "If you think my work is helpful or want to say thanks, you can consider buying me a coffee. It's totally optional.",
+  "line": "Line Invitation Link",
+  "home_message_article": "Search over 100 articles collected from PTT, Dcard, Facebook, Medium and Blogs",
+  "home_message_sync": "Daily synchronize with DAAD international programme database",
+  "home_message_line": "Join termin alert group to receive instant visa appointments information",
+  "home_message_faq": "Frequently asked questions about study abroad in Germany"
 }

@@ -80,7 +80,18 @@
   "search_course_helpertext": "Suchen Sie nach dem Namen des Kurses, dem Fach des Kurses, dem englischen Namen der Universität oder dem chinesischen Namen der Universität",
   "search_article_helpertext": "Suche nach Autor, Titel, Quelle, Bachelor- (Master-) Hochschule, Bachelor- (Master-) Fachbereich oder dem Inhalt des Artikels. (Volltextsuche unterstützt)",
   "expand": "Erweitern",
-  "collapse": "Zusammenbruch"
-
-
+  "collapse": "Zusammenbruch",
+  "faq":"FAQs",
+  "termin": "Termin-Alarm",
+  "about": "Um",
+  "aboutme": "Über mich",
+  "donate": "Unterstützer werden",
+  "bio": "Ich bin Yan-Ying Liao und studiere derzeit an der RWTH Aachen.",
+  "learnmore": "Mehr erfahren",
+  "donate_message": "Wenn Sie meine Arbeit hilfreich finden oder sich bedanken möchten, können Sie mir einen Kaffee spendieren. Es ist völlig optional.",
+  "line": "Line-Einladungslink",
+  "home_message_article": "Durchsuchen Sie über 100 Artikel, die von PTT, Dcard, Facebook, Medium und Blogs gesammelt wurden",
+  "home_message_sync": "Tägliche Synchronisierung mit der internationalen Programmdatenbank des DAAD",
+  "home_message_line": "Treten Sie der Termin-Alert-Gruppe bei, um sofortige Informationen zu Visa-Terminen zu erhalten",
+  "home_message_faq": "Häufig gestellte Fragen zum Auslandsstudium in Deutschland"
 }

@@ -6,20 +6,20 @@ import {
   Stack,
   SvgIcon,
   Typography,
-} from '@mui/material';
-import { useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import School from '../../static/undraw_back_to_school_inwc.svg';
-import Dog from '../../static/dog.svg';
-import { useTranslation } from 'react-i18next';
-import ReactGA from 'react-ga4';
-import { ReactComponent as SvgDog } from '../../static/dog.svg';
+} from "@mui/material";
+import { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import School from "../../static/undraw_back_to_school_inwc.svg";
+import Dog from "../../static/dog.svg";
+import { useTranslation } from "react-i18next";
+import ReactGA from "react-ga4";
+import { ReactComponent as SvgDog } from "../../static/dog.svg";
 
 export default function HomePage() {
   const { t } = useTranslation();
   // const { pathname } = useLocation();
   useEffect(() => {
-    document.title = `${t('home_header')} | Go Germany`;
+    document.title = `${t("home_header")} | Go Germany`;
   }, [t]);
 
   return (
@@ -31,8 +31,8 @@ export default function HomePage() {
       marginLeft={{ xs: -2, lg: -5.1, sm: -3 }}
       sx={{
         mt: -4,
-        width: '100vw',
-        minHeight: '100vh',
+        width: "100vw",
+        minHeight: "100vh",
         borderRadius: 0,
       }}
       // alignItems="center"
@@ -60,25 +60,47 @@ export default function HomePage() {
           </Grid>
 
           <Grid item lg={8} sx={{ p: 5 }}>
-            <Typography variant="h4">{t('home_message')}</Typography>
+            <Typography variant="h4">{t("home_message")}</Typography>
+            <ul>
+              <li>
+                <Typography variant="subtitle1">
+                  {t("home_message_article")}
+                </Typography>
+              </li>
+              <li>
+                <Typography variant="subtitle1">
+                  {t("home_message_sync")}
+                </Typography>
+              </li>
+              <li>
+                <Typography variant="subtitle1">
+                  {t("home_message_line")}
+                </Typography>
+              </li>
+              <li>
+                <Typography variant="subtitle1">
+                  {t("home_message_faq")}
+                </Typography>
+              </li>
+            </ul>
           </Grid>
 
           <Grid
             item
             xs={12}
             sx={{ px: 5 }}
-            justifyContent={{ xs: 'center', lg: 'left' }}
+            justifyContent={{ xs: "center", lg: "left" }}
             display="flex"
           >
-            <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
+            <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
               <Button
                 variant="contained"
                 size="large"
                 component={Link}
                 to="/programme"
-                sx={{ textTransform: 'none' }}
+                sx={{ textTransform: "none" }}
               >
-                {t('home_button_programme')}
+                {t("home_button_programme")}
               </Button>
               <Button
                 variant="contained"
@@ -86,9 +108,9 @@ export default function HomePage() {
                 component={Link}
                 to="/article"
                 color="success"
-                sx={{ textTransform: 'none' }}
+                sx={{ textTransform: "none" }}
               >
-                {t('home_button_article')}
+                {t("home_button_article")}
               </Button>
             </Stack>
           </Grid>
@@ -101,7 +123,7 @@ export default function HomePage() {
             display="flex"
             sx={{ mb: 3 }}
           >
-            <img src={School} style={{ height: 'auto', maxWidth: '100%' }} />
+            <img src={School} style={{ height: "auto", maxWidth: "100%" }} />
           </Grid>
         </Grid>
       </Container>
