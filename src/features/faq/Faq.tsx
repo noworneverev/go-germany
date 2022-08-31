@@ -8,7 +8,6 @@ import {
   Typography,
 } from "@mui/material";
 import { useTranslation } from "react-i18next";
-
 import TableOfContent from "../../app/components/TableOfContent";
 import QaAccordions from "./QaAccordions";
 import LoadingComponent from "../../app/layout/LoadingComponent";
@@ -111,52 +110,4 @@ export default function Faq() {
       </Container>
     </React.Fragment>
   );
-}
-
-{
-  /* <Container>      
-      <Grid container mb={1}>
-        <Grid item lg md sm xs>
-          <TableOfContent qa={qa} />         
-        </Grid>
-        <Grid item justifyContent="flex-end">
-          <Box>
-            <Button onClick={handleAllChange}>
-              {allExpanded ? '全部縮合' : '全部展開'}
-            </Button>
-          </Box>
-        </Grid>
-      </Grid>
-      <div>
-        {qa.map((item, index) => (
-          <React.Fragment key={index}>
-            <div id={item.id} style={{ scrollMarginTop: '5em' }}></div>
-            <Typography variant="h4" gutterBottom>
-              {item.title}
-            </Typography>
-            <AppQaAccordion
-              data={item.data}
-              expanded={expanded}
-              setExpanded={setExpanded}
-            />
-            {item.tips && (
-              <Typography variant="h6" gutterBottom mt={2}>
-                {item.tipsTitle}
-              </Typography>
-            )}
-
-            <ol>
-            {item.tips &&
-              item.tips.map((tip, index) => (
-                <li key={index}>{tip}</li>
-              ))}
-            </ol>
-
-            {index !== qa.length - 1 && (
-              <Divider variant="middle" sx={{ my: 4 }} />
-            )}
-          </React.Fragment>
-        ))}
-      </div>
-    </Container> */
 }
