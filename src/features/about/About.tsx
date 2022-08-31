@@ -5,17 +5,22 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { CardHeader, Container, Grid, Link, Stack } from "@mui/material";
+import { Container, Grid, Link, Stack } from "@mui/material";
 import Jkopay from "../../static/jkopay_qrcode.png";
 import Paypal from "../../static/paypal.png";
 import { useTranslation } from "react-i18next";
-import GitHubButton from "react-github-btn";
-import { useTheme } from "@mui/material/styles";
 import Star from "./Star";
+import LoadingComponent from "../../app/layout/LoadingComponent";
 
 export default function About() {
   const { t } = useTranslation();
-  const theme = useTheme();
+  const [loading, setLoading] = React.useState(true);
+  React.useEffect(() => {
+    setLoading(false);
+  }, []);
+
+  if (loading) return <LoadingComponent disableShrink message={t("loading")} />;
+
   return (
     <Container>
       <Stack spacing={2}>
