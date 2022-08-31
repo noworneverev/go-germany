@@ -1,16 +1,14 @@
-import { LoadingButton } from '@mui/lab';
-import { Box, Button, Grid, Paper, Typography } from '@mui/material';
-import React, { useEffect } from 'react';
-import { FieldValues, useForm } from 'react-hook-form';
-import { toast } from 'react-toastify';
-import agent from '../../app/api/agent';
-import AppRadio from '../../app/components/AppRadio';
-import AppSelectList from '../../app/components/AppSelectList';
-import AppTextInput from '../../app/components/AppTextinput';
-import useCourses from '../../app/hooks/useCourses';
-import { Course } from '../../app/models/course';
-import { useAppDispatch, useAppSelector } from '../../app/store/configureStore';
-import { setCourse } from '../programme/programmeSlice';
+import { LoadingButton } from "@mui/lab";
+import { Box, Button, Grid, Typography } from "@mui/material";
+import { FieldValues, useForm } from "react-hook-form";
+import { toast } from "react-toastify";
+import agent from "../../app/api/agent";
+import AppRadio from "../../app/components/AppRadio";
+import AppSelectList from "../../app/components/AppSelectList";
+import AppTextInput from "../../app/components/AppTextinput";
+import useCourses from "../../app/hooks/useCourses";
+import { Course } from "../../app/models/course";
+import { useAppDispatch, useAppSelector } from "../../app/store/configureStore";
 
 export default function CourseForm() {
   const { courseTypes, institutions, subjects } = useCourses();
@@ -39,7 +37,7 @@ export default function CourseForm() {
         response = await agent.Admin.createCourse(data, user.token);
         // console.log(response);
         // dispatch(setCourse(response));
-        toast.success('Course created!');
+        toast.success("Course created!");
         reset();
       }
     } catch (error) {

@@ -5,28 +5,26 @@ import {
   FormControlLabel,
   Checkbox,
   Typography,
-  Button,
-} from '@mui/material';
-import { useTranslation } from 'react-i18next';
-import AppAccordion from '../../app/components/AppAccordion';
-import AppSelectCheckboxes from '../../app/components/AppSelectCheckboxes';
-import CheckboxButtons from '../../app/components/CheckboxButtons';
-import useCourses from '../../app/hooks/useCourses';
-import { useAppDispatch } from '../../app/store/configureStore';
-import CourseSearch from './CourseSearch';
-import { setCourseParams } from './programmeSlice';
-import { Dispatch, SetStateAction } from 'react';
+} from "@mui/material";
+import { useTranslation } from "react-i18next";
+import AppAccordion from "../../app/components/AppAccordion";
+import AppSelectCheckboxes from "../../app/components/AppSelectCheckboxes";
+import CheckboxButtons from "../../app/components/CheckboxButtons";
+import useCourses from "../../app/hooks/useCourses";
+import { useAppDispatch } from "../../app/store/configureStore";
+import CourseSearch from "./CourseSearch";
+import { setCourseParams } from "./programmeSlice";
 
 const labels = {
-  '1': 'Bachelor',
-  '2': 'Master',
-  '3': 'Ph.D.',
-  '4': 'Cross-faculty graduate and research school',
-  '5': 'Language course',
-  '6': 'Short course',
-  '56': 'Short course and language course',
-  '7': 'Prep course',
-  '9': 'Various',
+  "1": "Bachelor",
+  "2": "Master",
+  "3": "Ph.D.",
+  "4": "Cross-faculty graduate and research school",
+  "5": "Language course",
+  "6": "Short course",
+  "56": "Short course and language course",
+  "7": "Prep course",
+  "9": "Various",
 };
 
 export default function CourseFilters() {
@@ -43,7 +41,7 @@ export default function CourseFilters() {
       </Paper>
       <Paper sx={{ boxShadow: 2 }}>
         <AppAccordion
-          title={t('course_type')}
+          title={t("course_type")}
           childComp={
             <CheckboxButtons
               items={courseTypes}
@@ -58,7 +56,7 @@ export default function CourseFilters() {
       </Paper>
       <Paper sx={{ boxShadow: 2 }}>
         <AppAccordion
-          title={t('course_language')}
+          title={t("course_language")}
           childComp={
             <CheckboxButtons
               items={languages}
@@ -77,8 +75,8 @@ export default function CourseFilters() {
           onChange={(items: string[]) =>
             dispatch(setCourseParams({ subjects: items }))
           }
-          title={t('subject')}
-          placeholder={t('subject')}
+          title={t("subject")}
+          placeholder={t("subject")}
         />
       </Paper>
       <Paper sx={{ boxShadow: 2 }}>
@@ -88,14 +86,14 @@ export default function CourseFilters() {
           onChange={(items: string[]) =>
             dispatch(setCourseParams({ institutions: items }))
           }
-          title={t('institution')}
-          placeholder={t('institution')}
+          title={t("institution")}
+          placeholder={t("institution")}
         />
       </Paper>
 
       <Paper sx={{ boxShadow: 2 }}>
         <AppAccordion
-          title={t('istu9_u15')}
+          title={t("istu9_u15")}
           childComp={
             <>
               <FormGroup>
@@ -145,7 +143,7 @@ export default function CourseFilters() {
                 }}
               />
             }
-            label={t('has_articles')}
+            label={t("has_articles")}
           />
         </FormGroup>
         {/* <CheckboxButtons
@@ -159,7 +157,7 @@ export default function CourseFilters() {
       </Paper>
       <Paper sx={{ paddingLeft: 2, boxShadow: 2, py: 0.6 }}>
         <Typography color="text.secondary" gutterBottom sx={{ mt: 1 }}>
-          {t('performance')}
+          {t("performance")}
         </Typography>
         <FormGroup>
           <FormControlLabel
@@ -175,7 +173,7 @@ export default function CourseFilters() {
                 }}
               />
             }
-            label={t('hide_language_article')}
+            label={t("hide_language_article")}
           />
         </FormGroup>
       </Paper>
