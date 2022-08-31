@@ -14,9 +14,7 @@ export default function Termin() {
     <Container>
       <Typography variant="h4">LINE Bot</Typography>
       <Divider sx={{ mb: 2 }} />
-      <Typography gutterBottom>
-        德國簽證自動通知群組，有新名額釋出會自動發送訊息通知，通知機器人每年5~9月24小時運行，通知6~8月及9/1~9/7是否有預約名額。
-      </Typography>
+      <Typography gutterBottom>{t("linebot_description")}</Typography>
       <img src={LinePreview} width="287" alt="preview of notification" />
 
       <Typography variant="h4" mt={3}>
@@ -32,8 +30,9 @@ export default function Termin() {
         >
           https://reurl.cc/MNZlrk
         </Link>{" "}
-        密碼termin
       </Typography>
+      <Typography>{t("password")}：termin</Typography>
+
       <img src={LineGroup} width="230" alt="Line group invitation link" />
       <Typography variant="h4" mt={3}>
         Github

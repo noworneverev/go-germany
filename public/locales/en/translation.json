@@ -89,12 +89,14 @@
   "bio": "I'm Yan-Ying Liao, currently pursing a degree at RWTH Aachen University.",
   "learnmore": "Learn more",
   "donate_message": "If you think my work is helpful or want to say thanks, you can consider buying me a coffee. It's totally optional.",
-  "line": "Line Invitation Link",
+  "line": "LINE Invitation Link",
   "home_message_article": "Search over 100 articles collected from PTT, Dcard, Facebook, Medium and Blogs",
   "home_message_sync": "Daily synchronize with DAAD International Programmes",
   "home_message_line": "Join termin alert LINE group to receive instant visa appointments notification",
   "home_message_faq": "Frequently asked questions about study abroad in Germany",
   "star": "If you like this site or find the Termin LINE group helpful, give it a star on Github. 🌟",
   "invitation": "My invitation links",
-  "thank_you_message": "Thank you in advance if you donate me or use my invitation links. The donation will be used for the maintenance of these projects, and if there is money left, I will definitely buy some coffee 😋."
+  "thank_you_message": "Thank you in advance if you donate me or use my invitation links. The donation will be used for the maintenance of these projects, and if there is money left, I will definitely buy some coffee 😋.",
+  "password": "Password",
+  "linebot_description": "The chatbot will instantly notify the LINE group from May to September every year when there're appointments released by German Institute Taipei."
 }

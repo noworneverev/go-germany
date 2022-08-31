@@ -89,12 +89,14 @@
   "bio": "Ich bin Yan-Ying Liao und studiere derzeit an der RWTH Aachen.",
   "learnmore": "Mehr erfahren",
   "donate_message": "Wenn Sie meine Arbeit hilfreich finden oder sich bedanken möchten, können Sie mir einen Kaffee spendieren. Es ist völlig optional.",
-  "line": "Line-Einladungslink",
+  "line": "LINE-Einladungslink",
   "home_message_article": "Durchsuchen Sie über 100 Artikel, die von PTT, Dcard, Facebook, Medium und Blogs gesammelt wurden",
   "home_message_sync": "Tägliche Synchronisierung mit DAAD International Programs",
   "home_message_line": "Treten Sie der Termin Alert LINE-Gruppe bei, um sofortige Benachrichtigungen zu Visa-Terminen zu erhalten",
   "home_message_faq": "Häufig gestellte Fragen zum Auslandsstudium in Deutschland",
   "star": "Wenn Ihnen diese Seite gefällt oder Sie die Termin LINE-Gruppe hilfreich finden, geben Sie ihr einen Stern auf Github. 🌟",
   "invitation": "Meine Einladungslinks",
-  "thank_you_message": "Vielen Dank im Voraus, wenn Sie mir spenden oder meine Einladungslinks verwenden. Die Spende wird für die Aufrechterhaltung dieser Projekte verwendet, und wenn Geld übrig bleibt, werde ich auf jeden Fall Kaffee kaufen 😋."
+  "thank_you_message": "Vielen Dank im Voraus, wenn Sie mir spenden oder meine Einladungslinks verwenden. Die Spende wird für die Aufrechterhaltung dieser Projekte verwendet, und wenn Geld übrig bleibt, werde ich auf jeden Fall Kaffee kaufen 😋.",
+  "password": "Passwort",
+  "linebot_description": "Der Chatbot benachrichtigt die LINE-Gruppe jedes Jahr von Mai bis September sofort, wenn Termine vom German Institute Taipei veröffentlicht werden."
 }

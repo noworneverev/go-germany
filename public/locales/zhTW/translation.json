@@ -89,12 +89,14 @@
   "bio": "我是Yan-Ying Liao，，目前在RWTH Aachen讀碩士。",
   "learnmore": "了解更多",
   "donate_message": "如果你覺得這個網站或預約群組有幫助，或是想感謝我，可以考慮請我喝杯咖啡。",
-  "line": "Line群組連結",
+  "line": "LINE群組連結",
   "home_message_article": "蒐集超過100篇心得文章(來源：PTT、Dcard、Facebook、Medium及部落格)",
   "home_message_sync": "每日自動同步DAAD國際學程資料",
   "home_message_line": "加入LINE簽證預約通知群組以接收即時預約名額通知",
   "home_message_faq": "德國留學常見問題Q&A",
   "star": "如果你喜歡這個網站或覺得預約群組有幫助，可以給他們一個星星⭐。",
   "invitation": "我的邀請連結",
-  "thank_you_message": "如果您有贊助的話，先感謝您的贊助，贊助錢錢將用來維護網站及預約群組持續運行，如果有剩的話我會去買咖啡來喝😋"
+  "thank_you_message": "如果您有贊助的話，先感謝您的贊助，贊助錢錢將用來維護網站及預約群組持續運行，如果有剩的話我會去買咖啡來喝😋",
+  "password": "密碼",
+  "linebot_description": "德國簽證自動通知群組，有新名額釋出會自動發送訊息通知，通知機器人每年5~9月24小時運行，通知6~8月及9/1~9/7是否有預約名額。"
 }
