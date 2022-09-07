@@ -94,15 +94,17 @@ export default function About() {
                 </Link>
               </li>
               <li>
-                Revolut:{" "}
-                <Link
-                  href="https://revolut.com/referral/yanyinahaj!SEP1-22-VR-DE"
-                  underline="hover"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  https://revolut.com/referral/yanyinahaj!SEP1-22-VR-DE
-                </Link>
+                <Typography>
+                  Revolut:{" "}
+                  <Link
+                    href="https://revolut.com/referral/yanyinahaj!SEP1-22-VR-DE"
+                    underline="hover"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    https://revolut.com/referral/yanyinahaj!SEP1-22-VR-DE
+                  </Link>
+                </Typography>
               </li>
 
               <li>
@@ -135,7 +137,7 @@ export default function About() {
               underline="none"
               target="_blank"
               rel="noopener"
-              href="https://www.buymeacoffee.com/noworneverev"
+              href="https://ko-fi.com/yanying"
             >
               Buy me a coffee
             </Link>
