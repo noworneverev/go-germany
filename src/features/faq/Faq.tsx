@@ -81,7 +81,7 @@ export default function Faq() {
     <React.Fragment>
       <CssBaseline />
 
-      <Container>
+      <Container disableGutters>
         <Grid container mb={1}>
           <Grid item lg md sm xs>
             <Box>
@@ -128,19 +128,19 @@ export default function Faq() {
         {/* </Stack> */}
 
         <Grid container spacing={2}>
-          <Grid item lg={11} md={11}>
+          <Grid item lg={11} md={11} sm={12}>
             <QaAccordions expanded={expanded} setExpanded={setExpanded} />
           </Grid>
-          <Grid item lg={1} md={1}>
+          <Grid item lg md sx={{ display: { md: "block", sm: "none" } }}>
             <TableOfContent qa={qa} />
           </Grid>
-        </Grid>
-        <Grid item justifyContent="flex-end">
-          <Typography variant="caption">
-            <i>
-              Last updated on <b>Sep 7, 2022</b> by <b>Yan-Ying Liao</b>
-            </i>
-          </Typography>
+          <Grid item lg={12} justifyContent="flex-end">
+            <Typography variant="caption">
+              <i>
+                Last updated on <b>Sep 7, 2022</b> by <b>Yan-Ying Liao</b>
+              </i>
+            </Typography>
+          </Grid>
         </Grid>
       </Container>
     </React.Fragment>

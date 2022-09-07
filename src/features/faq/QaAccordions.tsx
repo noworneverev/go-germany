@@ -13,7 +13,7 @@ export default function QaAccordions({ expanded, setExpanded }: Props) {
   // const [expanded, setExpanded] = useState<string[]>([]);
 
   return (
-    <div>
+    <>
       {qa.map((item, index) => (
         <React.Fragment key={index}>
           <div id={item.id} style={{ scrollMarginTop: "5em" }}></div>
@@ -35,6 +35,6 @@ export default function QaAccordions({ expanded, setExpanded }: Props) {
           )}
         </React.Fragment>
       ))}
-    </div>
+    </>
   );
 }

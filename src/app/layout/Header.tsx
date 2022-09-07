@@ -14,6 +14,7 @@ import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import { useTranslation } from "react-i18next";
 import LanguageMenu from "./LanguageMenu";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import LaunchIcon from "@mui/icons-material/Launch";
 import { Link as RouterLink, useLocation, useNavigate } from "react-router-dom";
 import BookmarkIcon from "@mui/icons-material/Bookmark";
 import { useAppDispatch, useAppSelector } from "../store/configureStore";
@@ -247,6 +248,21 @@ const Header = ({ darkMode, handleThemeChange }: Props) => {
                   <Typography textAlign="center">{t("feedback")}</Typography>
                 </MenuItem>
                 <LanguageMenu />
+                <Link
+                  target="_blank"
+                  href={"https://github.com/noworneverev/go-germany"}
+                  underline="none"
+                  color="inherit"
+                >
+                  <MenuItem
+                    key="github"
+                    // onClick={(event) => handleNavClick(event, "/feedback")}
+                  >
+                    <Typography textAlign="center">Github</Typography>
+                    <LaunchIcon fontSize="small" sx={{ ml: 1 }} />
+                  </MenuItem>
+                </Link>
+
                 {/* <AdminMenu user={user} /> */}
               </Menu>
             </Box>
@@ -372,7 +388,7 @@ const Header = ({ darkMode, handleThemeChange }: Props) => {
               </IconButton>
             </Box>
 
-            <Box sx={{ flexGrow: 0 }}>
+            {/* <Box sx={{ flexGrow: 0 }}>
               <Tooltip title="Github repository">
                 <Link
                   target="_blank"
@@ -385,7 +401,7 @@ const Header = ({ darkMode, handleThemeChange }: Props) => {
                   </IconButton>
                 </Link>
               </Tooltip>
-            </Box>
+            </Box> */}
 
             <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
               <IconButton
