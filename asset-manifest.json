@@ -1,21 +1,24 @@
 {
   "files": {
     "main.css": "/go-germany/static/css/main.83216d16.css",
-    "main.js": "/go-germany/static/js/main.b279e552.js",
+    "main.js": "/go-germany/static/js/main.b035e39b.js",
     "static/js/787.c4e7f8f9.chunk.js": "/go-germany/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/jkopay_qrcode.png": "/go-germany/static/media/jkopay_qrcode.8d0af98696a615a7d5e2.png",
     "static/media/undraw_back_to_school_inwc.svg": "/go-germany/static/media/undraw_back_to_school_inwc.0a0abe738f3a233182f74a0249d00344.svg",
     "static/media/undraw_city_life_gnpr.svg": "/go-germany/static/media/undraw_city_life_gnpr.dd4e4e9f226dabb019ecc544685ca885.svg",
     "static/media/tu9.png": "/go-germany/static/media/tu9.fc153c4085a8ea1c28ad.png",
     "static/media/German_U15.png": "/go-germany/static/media/German_U15.0637fb9ca832c7d76971.png",
+    "static/media/line.jpg": "/go-germany/static/media/line.0ce89a5ca59f4b2b4e2c.jpg",
+    "static/media/termin.png": "/go-germany/static/media/termin.ba97cdac4fc8d4eb9a95.png",
     "static/media/dog.svg": "/go-germany/static/media/dog.efa7732edf8a516c5e122f9df74f6af9.svg",
     "index.html": "/go-germany/index.html",
     "static/media/getFetch.cjs": "/go-germany/static/media/getFetch.c780682470504fffbd04.cjs",
     "main.83216d16.css.map": "/go-germany/static/css/main.83216d16.css.map",
-    "main.b279e552.js.map": "/go-germany/static/js/main.b279e552.js.map",
+    "main.b035e39b.js.map": "/go-germany/static/js/main.b035e39b.js.map",
     "787.c4e7f8f9.chunk.js.map": "/go-germany/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.83216d16.css",
-    "static/js/main.b279e552.js"
+    "static/js/main.b035e39b.js"
   ]
 }
