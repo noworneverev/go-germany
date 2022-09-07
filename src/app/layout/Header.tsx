@@ -240,6 +240,12 @@ const Header = ({ darkMode, handleThemeChange }: Props) => {
                     );
                   }
                 })}
+                <MenuItem
+                  key="feedback"
+                  onClick={(event) => handleNavClick(event, "/feedback")}
+                >
+                  <Typography textAlign="center">{t("feedback")}</Typography>
+                </MenuItem>
                 <LanguageMenu />
                 {/* <AdminMenu user={user} /> */}
               </Menu>
@@ -381,7 +387,7 @@ const Header = ({ darkMode, handleThemeChange }: Props) => {
               </Tooltip>
             </Box>
 
-            <Box sx={{ flexGrow: 0 }}>
+            <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
               <IconButton
                 component={RouterLink}
                 to="/feedback"
