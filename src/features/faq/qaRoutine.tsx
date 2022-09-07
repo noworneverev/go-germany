@@ -5,9 +5,126 @@ export const qaRoutine = [
   {
     index: "routine1",
     question: "群組裡有沒有要去XXX的同學？",
-    answer:
-      "有創群的通常都會將連結放在社群「當我們同在德國🇩🇪」筆記本，沒看到的可以再到社群中詢問。",
-    link: <></>,
+    answer: "",
+    link: (
+      <>
+        <Typography>
+          有創群的通常都會將連結放在社群「當我們同在德國🇩🇪」筆記本，沒看到的可以再到社群中詢問。
+        </Typography>
+        <ul>
+          <li>
+            Dresden:{" "}
+            <Link
+              href="https://reurl.cc/QbaR60"
+              underline="hover"
+              target="_blank"
+              rel="noopener"
+            >
+              https://reurl.cc/QbaR60
+            </Link>
+          </li>
+          <li>
+            Göttingen:{" "}
+            <Link
+              href="https://reurl.cc/rRY9b1"
+              underline="hover"
+              target="_blank"
+              rel="noopener"
+            >
+              https://reurl.cc/rRY9b1
+            </Link>
+          </li>
+          <li>
+            Aachen:{" "}
+            <Link
+              href="https://reurl.cc/GENjqD"
+              underline="hover"
+              target="_blank"
+              rel="noopener"
+            >
+              https://reurl.cc/GENjqD
+            </Link>
+          </li>
+          <li>
+            Stuttgart:{" "}
+            <Link
+              href="https://reurl.cc/9pnvA8"
+              underline="hover"
+              target="_blank"
+              rel="noopener"
+            >
+              https://reurl.cc/9pnvA8
+            </Link>
+          </li>
+          <li>
+            Heidelberg:{" "}
+            <Link
+              href="https://reurl.cc/NRxQmm"
+              underline="hover"
+              target="_blank"
+              rel="noopener"
+            >
+              https://reurl.cc/NRxQmm
+            </Link>
+          </li>
+          <li>
+            Düsseldorf:{" "}
+            <Link
+              href="https://reurl.cc/xQ3aME"
+              underline="hover"
+              target="_blank"
+              rel="noopener"
+            >
+              https://reurl.cc/xQ3aME
+            </Link>
+          </li>
+          <li>
+            RUB:{" "}
+            <Link
+              href="https://reurl.cc/0XWv0k"
+              underline="hover"
+              target="_blank"
+              rel="noopener"
+            >
+              https://reurl.cc/0XWv0k
+            </Link>
+          </li>
+          <li>
+            Leipzig:{" "}
+            <Link
+              href="https://reurl.cc/4pNreV"
+              underline="hover"
+              target="_blank"
+              rel="noopener"
+            >
+              https://reurl.cc/4pNreV
+            </Link>
+          </li>
+          <li>
+            Wüzburg:{" "}
+            <Link
+              href="https://reurl.cc/nOYN3n"
+              underline="hover"
+              target="_blank"
+              rel="noopener"
+            >
+              https://reurl.cc/nOYN3n
+            </Link>
+          </li>
+          <li>
+            Frankfurt:{" "}
+            <Link
+              href="https://reurl.cc/YX3Ea4"
+              underline="hover"
+              target="_blank"
+              rel="noopener"
+            >
+              https://reurl.cc/YX3Ea4
+            </Link>
+          </li>
+        </ul>
+      </>
+    ),
   },
   {
     index: "routine2",

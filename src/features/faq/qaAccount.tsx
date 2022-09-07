@@ -131,6 +131,63 @@ export const qaAccount = [
     ),
   },
   {
+    index: "account4-1",
+    question: "有N26的推薦碼嗎？",
+    answer: "",
+    link: (
+      <>
+        <Typography>
+          可以用Q&A作者的yuchengs8792或使用他的網址註冊{" "}
+          <Link
+            href="https://n26.com/r/yuchengs8792"
+            underline="hover"
+            target="_blank"
+            rel="noopener"
+          >
+            https://n26.com/r/yuchengs8792
+          </Link>{" "}
+          ，
+          有幫忙用Q&A作者的推薦碼，開卡後完成€15以上的消費之後，將英文名字及您N26的QR
+          code寄到他的信箱bt877126@gmail.com，確認後可分得一半的回饋金。
+        </Typography>
+      </>
+    ),
+  },
+  {
+    index: "account4-2",
+    question: "有Revolut的推薦碼嗎？",
+    answer: "",
+    link: (
+      <>
+        <Typography>
+          可以用Q&A作者的{" "}
+          <Link
+            href="https://revolut.com/referral/yuchon71rc!SEP1-22-VR-DE"
+            underline="hover"
+            target="_blank"
+            rel="noopener"
+          >
+            https://revolut.com/referral/yuchon71rc!SEP1-22-VR-DE
+          </Link>{" "}
+          任務：開卡後申請實體卡並消費€5三筆且需要以轉帳或刷卡完成儲值一次，需要在9/13以前完成，回饋金額是以抽獎的方式，最少€10最多有€200。完成任務後一樣透過信箱聯絡他，他會將一半的回饋金匯給你。
+        </Typography>
+        <br />
+        <Typography>
+          或使用本站作者的{" "}
+          <Link
+            href="https://revolut.com/referral/yanyinahaj!SEP1-22-VR-DE"
+            underline="hover"
+            target="_blank"
+            rel="noopener"
+          >
+            https://revolut.com/referral/yanyinahaj!SEP1-22-VR-DE
+          </Link>{" "}
+          不用寄信給我，我不會把錢分你 🍺
+        </Typography>
+      </>
+    ),
+  },
+  {
     index: "account5",
     question: "開通N26需要視訊驗證，他會問什麼問題？",
     answer: "",
