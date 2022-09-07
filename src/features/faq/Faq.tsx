@@ -1,13 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  Box,
-  Button,
-  Container,
-  CssBaseline,
-  Grid,
-  Stack,
-  Typography,
-} from "@mui/material";
+import { Box, Button, Container, Grid, Stack, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import TableOfContent from "../../app/components/TableOfContent";
 import QaAccordions from "./QaAccordions";
@@ -79,9 +71,9 @@ export default function Faq() {
 
   return (
     <React.Fragment>
-      <CssBaseline />
+      {/* <CssBaseline /> */}
 
-      <Container disableGutters>
+      <Container disableGutters fixed>
         <Grid container mb={1}>
           <Grid item lg md sm xs>
             <Box>
@@ -90,30 +82,7 @@ export default function Faq() {
               </Button>
             </Box>
           </Grid>
-          {/* <Grid item justifyContent="flex-end">
-            <Typography variant="caption">
-              <i>
-                Last updated on <b>Aug 30, 2022</b> by <b>Yan-Ying Liao</b>
-              </i>
-            </Typography>
-          </Grid> */}
         </Grid>
-
-        {/* <Box justifyContent="flex-end" mb={1}>
-          <Button onClick={handleAllChange}>
-            {allExpanded ? "全部縮合" : "全部展開"}
-          </Button>
-        </Box>
-        <Box justifyContent="flex-end" mb={1}>
-          <Typography>
-            Last updated on Aug 8, 2022 by Sébastien Lorber
-          </Typography>
-        </Box> */}
-        {/* <Stack
-          direction="column"
-          spacing={0.5}
-          sx={{ display: { xs: "block", md: "none" } }}
-        > */}
         <Stack mb={2} sx={{ display: { xs: "flex", md: "none" } }}>
           {qa.map((item) => (
             <Button
@@ -125,23 +94,19 @@ export default function Faq() {
             </Button>
           ))}
         </Stack>
-        {/* </Stack> */}
-
         <Grid container spacing={2}>
-          <Grid item lg={11} md={11} sm={12}>
+          <Grid item lg={11} md={11} sm xs>
             <QaAccordions expanded={expanded} setExpanded={setExpanded} />
           </Grid>
           <Grid item lg md sx={{ display: { md: "block", sm: "none" } }}>
             <TableOfContent qa={qa} />
           </Grid>
-          <Grid item lg={12} justifyContent="flex-end">
-            <Typography variant="caption">
-              <i>
-                Last updated on <b>Sep 7, 2022</b> by <b>Yan-Ying Liao</b>
-              </i>
-            </Typography>
-          </Grid>
         </Grid>
+        <Typography variant="caption">
+          <i>
+            Last updated on <b>Sep 7, 2022</b> by <b>Yan-Ying Liao</b>
+          </i>
+        </Typography>
       </Container>
     </React.Fragment>
   );
