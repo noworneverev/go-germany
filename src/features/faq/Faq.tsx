@@ -5,6 +5,7 @@ import {
   Container,
   CssBaseline,
   Grid,
+  Stack,
   Typography,
 } from "@mui/material";
 import { useTranslation } from "react-i18next";
@@ -44,6 +45,16 @@ export default function Faq() {
   //   setExpanded((prev) => !prev);
   // };
 
+  const handleClick = (anchorId: string) => {
+    const anchor = document.querySelector(`#${anchorId}`);
+    if (anchor) {
+      anchor.scrollIntoView({
+        // behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   const [loading, setLoading] = useState(true);
   const [allExpanded, setAllExpanded] = useState<boolean>(false);
   const [expanded, setExpanded] = useState<string[]>([]);
@@ -79,13 +90,13 @@ export default function Faq() {
               </Button>
             </Box>
           </Grid>
-          <Grid item justifyContent="flex-end">
+          {/* <Grid item justifyContent="flex-end">
             <Typography variant="caption">
               <i>
                 Last updated on <b>Aug 30, 2022</b> by <b>Yan-Ying Liao</b>
               </i>
             </Typography>
-          </Grid>
+          </Grid> */}
         </Grid>
 
         {/* <Box justifyContent="flex-end" mb={1}>
@@ -98,6 +109,23 @@ export default function Faq() {
             Last updated on Aug 8, 2022 by Sébastien Lorber
           </Typography>
         </Box> */}
+        {/* <Stack
+          direction="column"
+          spacing={0.5}
+          sx={{ display: { xs: "block", md: "none" } }}
+        > */}
+        <Stack mb={2} sx={{ display: { xs: "flex", md: "none" } }}>
+          {qa.map((item) => (
+            <Button
+              key={item.id}
+              size="small"
+              onClick={() => handleClick(item.id)}
+            >
+              {item.title}
+            </Button>
+          ))}
+        </Stack>
+        {/* </Stack> */}
 
         <Grid container spacing={2}>
           <Grid item lg={11} md={11}>
@@ -106,6 +134,13 @@ export default function Faq() {
           <Grid item lg={1} md={1}>
             <TableOfContent qa={qa} />
           </Grid>
+        </Grid>
+        <Grid item justifyContent="flex-end">
+          <Typography variant="caption">
+            <i>
+              Last updated on <b>Sep 7, 2022</b> by <b>Yan-Ying Liao</b>
+            </i>
+          </Typography>
         </Grid>
       </Container>
     </React.Fragment>
