@@ -9,6 +9,7 @@ import {
   TableBody,
   Stack,
   Chip,
+  Link,
 } from "@mui/material";
 import { useState } from "react";
 import { Course } from "../../app/models/course";
@@ -20,6 +21,7 @@ import StyledTableRow from "../../app/components/StyledTableRow";
 import DensityMenu from "../../app/components/DensityMenu";
 import { renderDate } from "../../app/utils/utils";
 import StyledLink from "../../app/components/StyledLink";
+import { Link as RouterLink } from "react-router-dom";
 
 interface Props {
   course: Course;
@@ -136,7 +138,15 @@ export default function ExperienceTable({ course }: Props) {
               course.articles.map((row) => (
                 <StyledTableRow key={row.id}>
                   <StyledTableCell component="th" scope="row">
-                    {row.author}
+                    <Link
+                      component={RouterLink}
+                      underline="hover"
+                      color="inherit"
+                      to={`/article/${row.id}`}
+                      sx={{ mr: 1 }}
+                    >
+                      {row.author}
+                    </Link>
                   </StyledTableCell>
                   <StyledTableCell>
                     <StyledLink href={row.link} text={row.title} />
