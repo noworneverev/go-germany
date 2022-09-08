@@ -80,7 +80,7 @@ export default function AppSelectCheckboxes({
       // onChange={(event, value) => handleInputChange(event, value)}
       onChange={debounce(
         (event, value) => handleInputChange(event, value),
-        1000
+        500
       )}
       renderInput={(params) => (
         <TextField {...params} label={title} placeholder={placeholder} />

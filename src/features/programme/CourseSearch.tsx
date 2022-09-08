@@ -22,7 +22,7 @@ export default function CourseSearch() {
         action: `Search programme: ${event.target.value}`,
       });
     }
-  }, 1000);
+  }, 500);
 
   return (
     <Tooltip title={t("search_course_helpertext")} arrow placement="right">
