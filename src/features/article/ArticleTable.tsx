@@ -13,32 +13,32 @@ import {
   Stack,
   Typography,
   Chip,
-} from '@mui/material';
-import { useTranslation } from 'react-i18next';
-import { Article } from '../../app/models/article';
-import { MetaData } from '../../app/models/pagination';
-import { useAppDispatch } from '../../app/store/configureStore';
-import LaunchIcon from '@mui/icons-material/Launch';
-import VisibilityIcon from '@mui/icons-material/Visibility';
-import { Link as RouterLink } from 'react-router-dom';
-import { renderDate } from '../../app/utils/utils';
-import { renderCourseType } from '../programme/CourseTable';
-import BookmarkAddIcon from '@mui/icons-material/BookmarkAdd';
-import { renderResultChip } from '../programme/ArticlesTooltip';
+} from "@mui/material";
+import { useTranslation } from "react-i18next";
+import { Article } from "../../app/models/article";
+import { MetaData } from "../../app/models/pagination";
+import { useAppDispatch } from "../../app/store/configureStore";
+import LaunchIcon from "@mui/icons-material/Launch";
+import VisibilityIcon from "@mui/icons-material/Visibility";
+import { Link as RouterLink } from "react-router-dom";
+import { renderDate } from "../../app/utils/utils";
+import { renderCourseType } from "../programme/CourseTable";
+import BookmarkAddIcon from "@mui/icons-material/BookmarkAdd";
+import { renderResultChip } from "../programme/ArticlesTooltip";
 import {
   addBookmarkArticleItem,
   removeBookmarkArticleItem,
   setBookmarkArticle,
-} from '../bookmark/bookmarkSlice';
-import DeleteIcon from '@mui/icons-material/Delete';
-import { Dispatch, SetStateAction, useState } from 'react';
-import ArticleColumnSwitches from './ArticleColumnSwitches';
-import DensityMenu from '../../app/components/DensityMenu';
-import StyledTableCell from '../../app/components/StyledTableCell';
-import StyledTableRow from '../../app/components/StyledTableRow';
-import ReactGA from 'react-ga4';
-import StyledLink from '../../app/components/StyledLink';
-import AppExpandButton from '../../app/components/AppExpandButton';
+} from "../bookmark/bookmarkSlice";
+import DeleteIcon from "@mui/icons-material/Delete";
+import { Dispatch, SetStateAction, useState } from "react";
+import ArticleColumnSwitches from "./ArticleColumnSwitches";
+import DensityMenu from "../../app/components/DensityMenu";
+import StyledTableCell from "../../app/components/StyledTableCell";
+import StyledTableRow from "../../app/components/StyledTableRow";
+import ReactGA from "react-ga4";
+import StyledLink from "../../app/components/StyledLink";
+import AppExpandButton from "../../app/components/AppExpandButton";
 
 interface Props {
   articlesLoaded: boolean;
@@ -116,8 +116,8 @@ export default function ArticleTable({
   };
 
   let skeletonArray = [];
-  if (metaData) skeletonArray = Array(metaData?.page_size).fill('');
-  else skeletonArray = Array(10).fill('');
+  if (metaData) skeletonArray = Array(metaData?.page_size).fill("");
+  else skeletonArray = Array(10).fill("");
 
   return (
     <>
@@ -136,13 +136,13 @@ export default function ArticleTable({
         <Table
           sx={{ minWidth: 700 }}
           aria-label="customized table"
-          size={dense ? 'small' : 'medium'}
+          size={dense ? "small" : "medium"}
         >
           <TableHead>
             <TableRow>
               <StyledTableCell size="small"></StyledTableCell>
               {columnState.author && (
-                <StyledTableCell>{t('author')}</StyledTableCell>
+                <StyledTableCell>{t("author")}</StyledTableCell>
               )}
 
               {columnState.title && (
@@ -154,56 +154,56 @@ export default function ArticleTable({
                   //   flexWrap: 'wrap',
                   // }}
                   >
-                    {t('title')}
+                    {t("title")}
                     <LaunchIcon fontSize="small" sx={{ ml: 1 }} />
                   </Box>
                 </StyledTableCell>
               )}
               {columnState.application && (
-                <StyledTableCell>{t('application')}</StyledTableCell>
+                <StyledTableCell>{t("application")}</StyledTableCell>
               )}
               {columnState.date && (
-                <StyledTableCell>{t('published_date')}</StyledTableCell>
+                <StyledTableCell>{t("published_date")}</StyledTableCell>
               )}
               {columnState.courseType && (
-                <StyledTableCell>{t('course_type')}</StyledTableCell>
+                <StyledTableCell>{t("course_type")}</StyledTableCell>
               )}
               {columnState.source && (
-                <StyledTableCell>{t('source')}</StyledTableCell>
+                <StyledTableCell>{t("source")}</StyledTableCell>
               )}
               {columnState.bsSchool && (
-                <StyledTableCell>{t('author_bs_school')}</StyledTableCell>
+                <StyledTableCell>{t("author_bs_school")}</StyledTableCell>
               )}
               {columnState.bsDepartment && (
-                <StyledTableCell>{t('author_bs_department')}</StyledTableCell>
+                <StyledTableCell>{t("author_bs_department")}</StyledTableCell>
               )}
               {columnState.bsGpa && (
-                <StyledTableCell>{t('author_bs_gpa')}</StyledTableCell>
+                <StyledTableCell>{t("author_bs_gpa")}</StyledTableCell>
               )}
               {columnState.msSchool && (
-                <StyledTableCell>{t('author_ms_school')}</StyledTableCell>
+                <StyledTableCell>{t("author_ms_school")}</StyledTableCell>
               )}
               {columnState.msDepartment && (
-                <StyledTableCell>{t('author_ms_department')}</StyledTableCell>
+                <StyledTableCell>{t("author_ms_department")}</StyledTableCell>
               )}
               {columnState.msGpa && (
-                <StyledTableCell>{t('author_ms_gpa')}</StyledTableCell>
+                <StyledTableCell>{t("author_ms_gpa")}</StyledTableCell>
               )}
               {columnState.toefl && (
-                <StyledTableCell>{t('toefl')}</StyledTableCell>
+                <StyledTableCell>{t("toefl")}</StyledTableCell>
               )}
               {columnState.ielts && (
-                <StyledTableCell>{t('ielts')}</StyledTableCell>
+                <StyledTableCell>{t("ielts")}</StyledTableCell>
               )}
-              {columnState.gre && <StyledTableCell>{t('gre')}</StyledTableCell>}
+              {columnState.gre && <StyledTableCell>{t("gre")}</StyledTableCell>}
               {columnState.gmat && (
-                <StyledTableCell>{t('gmat')}</StyledTableCell>
+                <StyledTableCell>{t("gmat")}</StyledTableCell>
               )}
               {columnState.testdaf && (
-                <StyledTableCell>{t('testdaf')}</StyledTableCell>
+                <StyledTableCell>{t("testdaf")}</StyledTableCell>
               )}
               {columnState.goethe && (
-                <StyledTableCell>{t('goethe')}</StyledTableCell>
+                <StyledTableCell>{t("goethe")}</StyledTableCell>
               )}
 
               <StyledTableCell></StyledTableCell>
@@ -318,7 +318,7 @@ export default function ArticleTable({
               articles.map((article) => (
                 <StyledTableRow key={article.id}>
                   <StyledTableCell align="justify" size="small">
-                    <Tooltip title={t('view')}>
+                    <Tooltip title={t("view")}>
                       <IconButton
                         component={RouterLink}
                         to={`/article/${article.id}`}
@@ -372,7 +372,7 @@ export default function ArticleTable({
                                     size="small"
                                     color="success"
                                     variant="outlined"
-                                    sx={{ ml: 0.5 }}
+                                    sx={{ ml: 0.5, mb: 0.5 }}
                                   />
                                 )}
                               </li>
@@ -446,7 +446,7 @@ export default function ArticleTable({
                         color="error"
                         onClick={() => {
                           removeBookmarkArticleItem(article);
-                          const articles = localStorage.getItem('article');
+                          const articles = localStorage.getItem("article");
                           if (articles) {
                             dispatch(setBookmarkArticle(JSON.parse(articles)));
                           }
@@ -455,21 +455,21 @@ export default function ArticleTable({
                         <DeleteIcon fontSize="inherit" />
                       </IconButton>
                     ) : (
-                      <Tooltip title={t('bookmark')}>
+                      <Tooltip title={t("bookmark")}>
                         <IconButton
                           onClick={() => {
                             addBookmarkArticleItem(article);
                             if (
-                              !window.location.href.includes('localhost') &&
+                              !window.location.href.includes("localhost") &&
                               process.env.REACT_APP_MEASUREMENT_ID
                             ) {
                               ReactGA.event({
-                                category: 'bookmark/article',
+                                category: "bookmark/article",
                                 action: `Bookmark Article: ${article.id}, ${article.author}, ${article.title}`,
                               });
                             }
 
-                            const articles = localStorage.getItem('article');
+                            const articles = localStorage.getItem("article");
                             if (articles) {
                               dispatch(
                                 setBookmarkArticle(JSON.parse(articles))
