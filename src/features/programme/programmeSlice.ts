@@ -36,7 +36,8 @@ function getAxiosParams(courseParams: CourseParams) {
     params.append('subjects', courseParams.subjects.join(';'));
   // params.append('subjects', courseParams.subjects.toString());
   if (courseParams.institutions.length > 0)
-    params.append('institutions', courseParams.institutions.toString());
+    params.append('institutions', courseParams.institutions.join(';'));
+    // params.append('institutions', courseParams.institutions.toString());
   if (courseParams.isTu9) params.append('isTu9', courseParams.isTu9.toString());
   if (courseParams.isU15) params.append('isU15', courseParams.isU15.toString());
   if (courseParams.hasArticles)
