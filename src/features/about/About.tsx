@@ -81,20 +81,20 @@ export default function About() {
             <Typography variant="h5" gutterBottom>
               {t("invitation")}
             </Typography>
-            <ul>
-              <li>
-                Coracle Prime:{" "}
-                <Link
-                  href="https://www.coracle.de/?ref=yanyingliao"
-                  underline="hover"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  https://www.coracle.de/?ref=yanyingliao
-                </Link>
-              </li>
-              <li>
-                <Typography>
+            <Box>
+              <ul>
+                <li>
+                  Coracle Prime:{" "}
+                  <Link
+                    href="https://www.coracle.de/?ref=yanyingliao"
+                    underline="hover"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    https://www.coracle.de/?ref=yanyingliao
+                  </Link>
+                </li>
+                <li>
                   Revolut:{" "}
                   <Link
                     href="https://revolut.com/referral/yanyinahaj!SEP1-22-VR-DE"
@@ -102,23 +102,24 @@ export default function About() {
                     target="_blank"
                     rel="noopener"
                   >
-                    https://revolut.com/referral/yanyinahaj!SEP1-22-VR-DE
+                    https://reurl.cc/O4R4m7
                   </Link>
-                </Typography>
-              </li>
+                </li>
 
-              <li>
-                Wise:{" "}
-                <Link
-                  href="https://wise.com/invite/u/yanyingl14"
-                  underline="hover"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  https://wise.com/invite/u/yanyingl14
-                </Link>
-              </li>
-            </ul>
+                <li>
+                  Wise:{" "}
+                  <Link
+                    href="https://wise.com/invite/u/yanyingl14"
+                    underline="hover"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    https://reurl.cc/ZblbNl
+                  </Link>
+                </li>
+              </ul>
+            </Box>
+
             <Typography>{t("thank_you_message")}</Typography>
           </CardContent>
 

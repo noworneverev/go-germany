@@ -83,7 +83,10 @@ export default function Faq() {
             </Box>
           </Grid>
         </Grid>
-        <Stack mb={2} sx={{ display: { xs: "flex", md: "none" } }}>
+        <Stack
+          mb={2}
+          sx={{ display: { xs: "flex", sm: "flex", md: "none", lg: "none" } }}
+        >
           {qa.map((item) => (
             <Button
               key={item.id}
@@ -98,7 +101,12 @@ export default function Faq() {
           <Grid item lg={11} md={11} sm xs>
             <QaAccordions expanded={expanded} setExpanded={setExpanded} />
           </Grid>
-          <Grid item lg md sx={{ display: { md: "block", sm: "none" } }}>
+          <Grid
+            item
+            lg
+            md
+            sx={{ display: { md: "block", sm: "none", xs: "none" } }}
+          >
             <TableOfContent qa={qa} />
           </Grid>
         </Grid>
