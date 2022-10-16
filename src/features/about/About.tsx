@@ -93,17 +93,40 @@ export default function About() {
                   >
                     https://www.coracle.de/?ref=yanyingliao
                   </Link>
+                  <ul>
+                    <li>{t("coracle")}</li>
+                  </ul>
                 </li>
                 <li>
-                  Revolut:{" "}
+                  N26:{" "}
                   <Link
-                    href="https://revolut.com/referral/yanyinahaj!SEP1-22-VR-DE"
+                    href="https://n26.com/r/yanyingl8869"
                     underline="hover"
                     target="_blank"
                     rel="noopener"
                   >
-                    https://reurl.cc/O4R4m7
+                    https://n26.com/r/yanyingl8869
                   </Link>
+                  <ul>
+                    <li>{t("n26")}</li>
+                  </ul>
+                </li>
+                <li>
+                  Revolut:{" "}
+                  <Link
+                    href="https://revolut.com/referral/yanyinahaj!OCT1-22-AR-L1"
+                    underline="hover"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    https://reurl.cc/eOeZV7
+                  </Link>
+                  <ul>
+                    {t("revolut_description")}
+                    <li>{t("revolut_task1")}</li>
+                    <li>{t("revolut_task2")}</li>
+                    <li>{t("revolut_task3")}</li>
+                  </ul>
                 </li>
 
                 <li>

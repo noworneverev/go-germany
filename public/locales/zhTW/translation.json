@@ -86,7 +86,7 @@
   "about": "關於",
   "aboutme": "關於我",
   "donate": "贊助",
-  "bio": "我是Yan-Ying Liao，，目前在RWTH Aachen讀碩士。",
+  "bio": "我是Yan-Ying Liao，目前在RWTH Aachen讀碩士。",
   "learnmore": "了解更多",
   "donate_message": "如果你覺得這個網站或預約群組有幫助，或是想感謝我，可以考慮請我喝杯咖啡。",
   "line": "LINE群組連結",
@@ -98,5 +98,11 @@
   "invitation": "我的邀請連結",
   "thank_you_message": "如果您有贊助的話，先感謝您的贊助，贊助錢錢將用來維護網站及預約群組持續運行，如果有剩的話我會去買咖啡來喝😋",
   "password": "密碼",
-  "linebot_description": "德國簽證自動通知群組，有新名額釋出會自動發送訊息通知，通知機器人每年5~9月24小時運行，通知6~8月及9/1~9/7是否有預約名額。"
+  "linebot_description": "德國簽證自動通知群組，有新名額釋出會自動發送訊息通知，通知機器人每年5~9月24小時運行，通知6~8月及9/1~9/7是否有預約名額。",
+  "coracle": "你和我都賺得€10",
+  "n26": "開卡並消費€15以上，我可以賺得€15",
+  "revolut_description": "完成下列任務我可以賺得€50：",
+  "revolut_task1": "以轉帳或刷卡儲值",
+  "revolut_task2": "申請實體卡",
+  "revolut_task3": "消費€5三筆"
 }
