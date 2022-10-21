@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/go-germany/static/css/main.83216d16.css",
-    "main.js": "/go-germany/static/js/main.68dcb3b2.js",
+    "main.js": "/go-germany/static/js/main.b403d848.js",
     "static/js/787.c4e7f8f9.chunk.js": "/go-germany/static/js/787.c4e7f8f9.chunk.js",
     "static/media/jkopay_qrcode.png": "/go-germany/static/media/jkopay_qrcode.8d0af98696a615a7d5e2.png",
     "static/media/undraw_back_to_school_inwc.svg": "/go-germany/static/media/undraw_back_to_school_inwc.0a0abe738f3a233182f74a0249d00344.svg",
@@ -14,11 +14,11 @@
     "index.html": "/go-germany/index.html",
     "static/media/getFetch.cjs": "/go-germany/static/media/getFetch.c780682470504fffbd04.cjs",
     "main.83216d16.css.map": "/go-germany/static/css/main.83216d16.css.map",
-    "main.68dcb3b2.js.map": "/go-germany/static/js/main.68dcb3b2.js.map",
+    "main.b403d848.js.map": "/go-germany/static/js/main.b403d848.js.map",
     "787.c4e7f8f9.chunk.js.map": "/go-germany/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.83216d16.css",
-    "static/js/main.68dcb3b2.js"
+    "static/js/main.b403d848.js"
   ]
 }
