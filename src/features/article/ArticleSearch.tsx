@@ -23,7 +23,7 @@ export default function ArticleSearch() {
         action: `Search article: ${event.target.value}`,
       });
     }
-  }, 500);
+  }, 1000);
 
   return (
     <Tooltip title={t("search_article_helpertext")} arrow placement="right">
