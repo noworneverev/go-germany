@@ -24,12 +24,12 @@ export default function Termin() {
   }, [t]);
 
   const getLogData = async () => {
-    if (process.env.REACT_PAPERTRAIL_TOKEN) {
+    if (process.env.REACT_APP_PAPERTRAIL_TOKEN) {
       const { data } = await axios.get<Log>(
         "https://papertrailapp.com/api/v1/events/search.json?system_id=13171385851",
         {
           headers: {
-            "X-Papertrail-Token": process.env.REACT_PAPERTRAIL_TOKEN,
+            "X-Papertrail-Token": process.env.REACT_APP_PAPERTRAIL_TOKEN,
           },
           withCredentials: false,
         }
