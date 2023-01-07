@@ -206,12 +206,12 @@ export const qaAccount = [
                 <li>
                   推薦連結：
                   <Link
-                    href="https://revolut.com/referral/yanyinahaj!OCT1-22-AR-L1"
+                    href="https://revolut.com/referral/yanyinahaj!JAN1-23-AR"
                     underline="hover"
                     target="_blank"
                     rel="noopener"
                   >
-                    https://revolut.com/referral/yanyinahaj!OCT1-22-AR-L1
+                    https://revolut.com/referral/yanyinahaj!JAN1-23-AR
                   </Link>{" "}
                 </li>
                 <li>
