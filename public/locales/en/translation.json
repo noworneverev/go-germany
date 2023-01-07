@@ -104,6 +104,7 @@
   "revolut_description": "Complete the following tasks and then I can earn €50:",
   "revolut_task1": "Top up your account by connecting another bank account or using a bank card",
   "revolut_task2": "Order their own physical Revolut card",
-  "revolut_task3": "Make 3 separate purchases of at least €5 each with their virtual or physical card"
+  "revolut_task3": "Make 3 separate purchases of at least €5 each with their virtual or physical card",
+  "donate_message2": "I pay for the server fee myself now. It's 5 US dollars per month. If you find this project helpful or benefit from it, please consider donate a bit to keep it running."
 
 }
