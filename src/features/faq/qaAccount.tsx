@@ -169,7 +169,7 @@ export const qaAccount = [
                   </Link>
                 </li>
                 <li>任務：開卡並消費€15以上</li>
-                <li>不用寄信給我，我不會把錢分你 🍺</li>
+                <li>完成任務寄信給我(n9102125@gmail.com)，可平分此獎勵</li>
               </ul>
             </>
           </li>
@@ -206,18 +206,18 @@ export const qaAccount = [
                 <li>
                   推薦連結：
                   <Link
-                    href="https://revolut.com/referral/yanyinahaj!JAN1-23-AR"
+                    href="https://revolut.com/referral/yanyinahaj!MAR1-23-AR"
                     underline="hover"
                     target="_blank"
                     rel="noopener"
                   >
-                    https://revolut.com/referral/yanyinahaj!JAN1-23-AR
+                    https://revolut.com/referral/yanyinahaj!MAR1-23-AR
                   </Link>{" "}
                 </li>
                 <li>
                   任務：開卡後申請實體卡並消費€5三筆且需要以轉帳或刷卡完成儲值一次
                 </li>
-                <li>不用寄信給我，我不會把錢分你 🍺</li>
+                <li>完成任務寄信給我(n9102125@gmail.com)，可平分此獎勵</li>
               </ul>
             </>
           </li>

@@ -1,6 +1,4 @@
 import { Box, Link } from "@mui/material";
-import { t } from "i18next";
-import React from "react";
 import { useTranslation } from "react-i18next";
 
 export default function InvitationLinks() {
@@ -39,12 +37,12 @@ export default function InvitationLinks() {
         <li>
           Revolut:{" "}
           <Link
-            href="https://revolut.com/referral/yanyinahaj!JAN1-23-AR"
+            href="https://revolut.com/referral/yanyinahaj!MAR1-23-AR"
             underline="hover"
             target="_blank"
             rel="noopener"
           >
-            https://revolut.com/referral/yanyinahaj!JAN1-23-AR
+            https://revolut.com/referral/yanyinahaj!MAR1-23-AR
           </Link>
           <ul>
             {t("revolut_description")}
