@@ -7,31 +7,17 @@ export default function InvitationLinks() {
     <Box>
       <ul>
         <li>
-          Coracle Prime:{" "}
+          sim.de:{" "}
           <Link
-            href="https://www.coracle.de/?ref=yanyingliao"
+            href="https://www.sim.de?kw=QTo4DATGs8wCpRSLdrzV0g%3D%3D"
             underline="hover"
             target="_blank"
             rel="noopener"
           >
-            https://www.coracle.de/?ref=yanyingliao
+            https://www.sim.de?kw=QTo4DATGs8wCpRSLdrzV0g%3D%3D
           </Link>
           <ul>
-            <li>{t("coracle")}</li>
-          </ul>
-        </li>
-        <li>
-          N26:{" "}
-          <Link
-            href="https://n26.com/r/yanyingl8869"
-            underline="hover"
-            target="_blank"
-            rel="noopener"
-          >
-            https://n26.com/r/yanyingl8869
-          </Link>
-          <ul>
-            <li>{t("n26")}</li>
+            <li>開卡完成會有20歐獎金，可平分此獎勵</li>
           </ul>
         </li>
         <li>
@@ -56,6 +42,34 @@ export default function InvitationLinks() {
             {/* <li>{t("revolut_task1")}</li>
             <li>{t("revolut_task2")}</li>
             <li>{t("revolut_task3")}</li> */}
+          </ul>
+        </li>
+        <li>
+          N26:{" "}
+          <Link
+            href="https://n26.com/r/yanyingl8869"
+            underline="hover"
+            target="_blank"
+            rel="noopener"
+          >
+            https://n26.com/r/yanyingl8869
+          </Link>
+          <ul>
+            <li>{t("n26")}</li>
+          </ul>
+        </li>
+        <li>
+          Coracle Prime:{" "}
+          <Link
+            href="https://www.coracle.de/?ref=yanyingliao"
+            underline="hover"
+            target="_blank"
+            rel="noopener"
+          >
+            https://www.coracle.de/?ref=yanyingliao
+          </Link>
+          <ul>
+            <li>{t("coracle")}</li>
           </ul>
         </li>
 

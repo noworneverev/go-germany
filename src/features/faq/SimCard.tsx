@@ -41,6 +41,23 @@ export default function SimCard() {
           德國可買
           <ul>
             <li>
+              sim.de：
+              <Link
+                href="https://www.sim.de?kw=QTo4DATGs8wCpRSLdrzV0g%3D%3D"
+                underline="hover"
+                target="_blank"
+                rel="noopener"
+              >
+                https://www.sim.de?kw=QTo4DATGs8wCpRSLdrzV0g%3D%3D
+              </Link>
+              <ul>
+                <li>
+                  O2線路，最便宜的選擇，用上方推薦連結申請有20歐獎金，若申辦成功可聯絡我(n9102125@gmail.com)平分獎金，另黑五時有機會有活動，可免除每月可取消方案費用20歐。
+                </li>
+              </ul>
+            </li>
+
+            <li>
               O2：
               <Link
                 href="https://reurl.cc/3YjX6L"
@@ -65,7 +82,7 @@ export default function SimCard() {
                 https://reurl.cc/60Ever
               </Link>
               <ul>
-                <li>ALDI超市就能買</li>
+                <li>ALDI超市就能買，28天收費一次</li>
               </ul>
             </li>
             <li>
@@ -93,7 +110,7 @@ export default function SimCard() {
                 https://reurl.cc/7pe0Z1
               </Link>
               <ul>
-                <li>€10有5GB，有推薦碼的話好像變6GB</li>
+                <li>€10有7GB，認證需要居留卡</li>
               </ul>
             </li>
             <li>

@@ -14,6 +14,7 @@ export default function Acknowledgements() {
           Yan-Ying Liao: 貢獻簽證篇、Coracle
           Prime篇、校稿、預約群組2.0作者、網站作者
         </li>
+        <li>Jana0: 貢獻生活篇</li>
       </ul>
     </>
   );

@@ -112,7 +112,7 @@ export default function Faq() {
         </Grid>
         <Typography variant="caption">
           <i>
-            Last updated on <b>Sep 7, 2022</b> by <b>Yan-Ying Liao</b>
+            Last updated on <b>Sep 23, 2023</b> by <b>Yan-Ying Liao</b>
           </i>
         </Typography>
       </Container>
