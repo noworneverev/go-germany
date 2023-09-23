@@ -12,7 +12,13 @@ import {
 import React, { useEffect, useState } from "react";
 import { Log } from "../../app/models/log";
 
-export default function LiveTail(logData: Log) {
+interface Props {
+  logData: Log;
+  isAdmin: boolean;
+  pwd: string;
+}
+
+export default function LiveTail({ logData, isAdmin, pwd }: Props) {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [showLivetail, setShowLivetail] = useState(false);
@@ -26,12 +32,12 @@ export default function LiveTail(logData: Log) {
   };
 
   useEffect(() => {
-    if (password === "101") {
+    if (password === pwd) {
       setShowLivetail(true);
     } else {
       setShowLivetail(false);
     }
-  }, [password]);
+  }, [password, pwd]);
 
   return (
     <>
@@ -65,7 +71,6 @@ export default function LiveTail(logData: Log) {
       ) : (
         <></>
       )}
-
       {showLivetail ? (
         <Paper
           sx={{
@@ -80,6 +85,14 @@ export default function LiveTail(logData: Log) {
             logData?.events
               .slice(0)
               .reverse()
+              .filter((e) => {
+                if (isAdmin) {
+                  return e.message;
+                } else {
+                  return e.message.includes("台北");
+                }
+                // e.message.includes("台北")
+              })
               .map((e) => (
                 <Stack direction="row" spacing={1} key={e.id}>
                   <Typography display="inline">

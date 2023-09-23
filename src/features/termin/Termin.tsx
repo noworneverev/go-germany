@@ -76,7 +76,11 @@ export default function Termin() {
         Live Tail
       </Typography>
       <Divider sx={{ mb: 2 }} />
-      {logData ? <LiveTail {...logData} /> : <></>}
+      {logData ? (
+        <LiveTail logData={logData} isAdmin={false} pwd="101" />
+      ) : (
+        <></>
+      )}
       <Typography variant="h4" mt={3}>
         Github
       </Typography>
@@ -100,6 +104,16 @@ export default function Termin() {
         {t("invitation")}
       </Typography>
       <InvitationLinks />
+
+      <Typography variant="h4" mt={3}>
+        Live Tail Admin Only
+      </Typography>
+      <Divider sx={{ mb: 2 }} />
+      {logData ? (
+        <LiveTail logData={logData} isAdmin={true} pwd="202" />
+      ) : (
+        <></>
+      )}
     </Container>
   );
 }
