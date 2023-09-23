@@ -35,20 +35,27 @@ export default function InvitationLinks() {
           </ul>
         </li>
         <li>
-          Revolut:{" "}
+          Revolut: {t("revolut_description")}{" "}
           <Link
+            target="_blank"
+            href={"mailto:n9102125@gmail.com"}
+            // underline="none"
+            // color="inherit"
+          >
+            n9102125@gmail.com
+          </Link>
+          {/* <Link
             href="https://revolut.com/referral/yanyinahaj!MAR1-23-AR"
             underline="hover"
             target="_blank"
             rel="noopener"
           >
             https://revolut.com/referral/yanyinahaj!MAR1-23-AR
-          </Link>
+          </Link> */}
           <ul>
-            {t("revolut_description")}
-            <li>{t("revolut_task1")}</li>
+            {/* <li>{t("revolut_task1")}</li>
             <li>{t("revolut_task2")}</li>
-            <li>{t("revolut_task3")}</li>
+            <li>{t("revolut_task3")}</li> */}
           </ul>
         </li>
 

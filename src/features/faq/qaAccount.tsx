@@ -43,10 +43,10 @@ export const qaAccount = [
     link: (
       <>
         <Typography variant="h4" gutterBottom>
-          N26
+          N26 (開戶需驗證居留證，2023/9/23更新)
         </Typography>
         <Typography>
-          第一種選項是申請N26，但開戶需要驗證護照，所以必須要在辦簽證前或拿回護照後再申請，地址先填德國宿舍，到達當地後再申請實體卡片。
+          N26自2023年中起開戶需要驗證居留證，必須到德國延簽完才能辦理。
         </Typography>
         <ul>
           <li>
@@ -138,21 +138,6 @@ export const qaAccount = [
       <>
         <ul>
           <li>
-            <Typography>
-              Q&A作者的: yuchengs8792或使用他的網址註冊{" "}
-              <Link
-                href="https://n26.com/r/yuchengs8792"
-                underline="hover"
-                target="_blank"
-                rel="noopener"
-              >
-                https://n26.com/r/yuchengs8792
-              </Link>
-              ，有幫忙用Q&A作者的推薦碼，開卡後完成€15以上的消費之後，將英文名字及您N26的QR
-              code寄到他的信箱bt877126@gmail.com，確認後可分得一半的回饋金。
-            </Typography>
-          </li>
-          <li>
             <>
               本站作者:
               <ul>
@@ -185,34 +170,15 @@ export const qaAccount = [
       <>
         <ul>
           <li>
-            <Typography>
-              Q&A作者的:{" "}
-              <Link
-                href="https://revolut.com/referral/yuchon71rc!SEP1-22-VR-DE"
-                underline="hover"
-                target="_blank"
-                rel="noopener"
-              >
-                https://revolut.com/referral/yuchon71rc!SEP1-22-VR-DE
-              </Link>{" "}
-              任務：開卡後申請實體卡並消費€5三筆且需要以轉帳或刷卡完成儲值一次，需要在9/13以前完成，回饋金額是以抽獎的方式，最少€10最多有€200。完成任務後一樣透過信箱聯絡他，他會將一半的回饋金匯給你。
-            </Typography>
-          </li>
-          <li>
             <>
               本站作者:{" "}
               <ul>
                 {" "}
                 <li>
-                  推薦連結：
-                  <Link
-                    href="https://revolut.com/referral/yanyinahaj!MAR1-23-AR"
-                    underline="hover"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    https://revolut.com/referral/yanyinahaj!MAR1-23-AR
-                  </Link>{" "}
+                  推薦連結：因推薦連結每月會變動，獎勵金額可能每月也不同，若要使用我的推薦碼請聯絡{" "}
+                  <Link target="_blank" href={"mailto:n9102125@gmail.com"}>
+                    n9102125@gmail.com
+                  </Link>
                 </li>
                 <li>
                   任務：開卡後申請實體卡並消費€5三筆且需要以轉帳或刷卡完成儲值一次
